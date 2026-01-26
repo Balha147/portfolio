@@ -5,65 +5,33 @@ interface ProjectModel {
 
 export const PROJECTS: ProjectModel[] = [
   {
-    title: 'Espace particulier / LCL',
+    title: $localize`:@@proj.lcl.title:Espace particulier / LCL`,
     code: `
     const project = {
       name: 'Mon Espace',
       tools: ['Angular 19', 'JEST', 'NestJS (BFF)', 'Java', 'Storybook', 'Git', 'Scrum'],
-      myRole: 'Full Stack Developer',
-      description: \`Au sein de ce projet, j'ai pleinement pris en charge la modernisation
-      du front-end en pilotant la migration complète d'Angular, de la version 15 à la 19.
-      J'ai développé tous les écrans en respectant les maquettes UX/UI et structuré l'interface
-      via la création d'un design system avec StoryBook, tout en implémentant des formulaires complexes.
-      Pour optimiser le contenu, j'ai intégré Prismic comme Headless CMS pour la gestion
-      des textes et images, et mis en place le tracking analytique.
-      Mes responsabilités se sont étendues au back-end où j'ai créé des microservices
-      Java/Spring Boot pour des fonctionnalités critiques comme les alertes de compte et
-      le système de parrainage.\`
-};`
+      myRole: '${$localize`:@@proj.role.fullstack:Full Stack Developer`}',
+      description: \`${$localize`:@@proj.lcl.desc:Pilotage de la modernisation Full Stack du projet : migration Angular 15 vers 19, création d'un Design System (Storybook) et intégration du CMS Prismic. Développement de formulaires complexes et de microservices Java/Spring Boot critiques (alertes, parrainage) avec mise en place du tracking analytique.`}\`
+    };`,
   },
   {
-    title: 'PPA / Malakoff Humanis (MH)',
+    title: $localize`:@@proj.mh.title:PPA / Malakoff Humanis (MH)`,
     code: `
     const project = {
-        name: 'Mon Espace',
-        tools: ['Angular 14', 'JEST', 'Storybook', 'Bitbucket', 'Java', 'Bootstrap', 'Git', 'Scrum'],
-        myRole: 'Full Stack Developer',
-        description:  \`J'ai été responsable du développement front-end à 100% d'une application Angular,
-          en conduisant les migrations successives de la version 11 à 14.
-          Mon travail a consisté à développer tous les écrans en respectant scrupuleusement
-          les maquettes UX/UI avec la bibliothèque interne Ds-Tools, et à moderniser les fonctionnalités
-          existantes en les migrant de Drupal vers Angular avec des améliorations.
-          Pour optimiser l'architecture, j'ai créé un service générique de CRUD basé sur une
-          classe abstraite et développé des modules complexes
-          (gestion d'adresses française/étrangère, code postal intelligent avec comportement dynamique).
-          J'ai également contribué à la bibliothèque interne en améliorant
-          des composants génériques (inputs, datepickers) et en créant un steppeur de formulaires réutilisable,
-          utilisé notamment pour les formulaires Santé et Prévoyance intégrant un service IA de pré-remplissage. Enfin,
-        j'ai assuré la performance via un module de cache et mis en place le
-        tracking complet de l'application avec Tag Commander.\`
-};`
+      name: 'Mon Espace',
+      tools: ['Angular 14', 'JEST', 'Storybook', 'Bitbucket', 'Java', 'Bootstrap', 'Git', 'Scrum'],
+      myRole: '${$localize`:@@proj.role.fullstack:Full Stack Developer`}',
+      description: \`${$localize`:@@proj.mh.desc:Responsable du front-end (Angular 11 à 14), j'ai piloté la migration de fonctionnalités Drupal vers Angular et optimisé l'architecture via des services CRUD génériques. J'ai conçu des modules complexes (gestion d'adresses dynamique) et enrichi la bibliothèque interne (Ds-Tools) avec des composants réutilisables (steppeur IA, inputs). Performance assurée par un module de cache et tracking complet via Tag Commander.`}\`
+    };`,
   },
   {
-    title: 'E-Animation / CACF',
+    title: $localize`:@@proj.cacf.title:E-Animation / CACF`,
     code: `
     const project = {
-        name: 'Mon Espace',
-        tools: ['Angular 10', 'Java', 'REST', 'JEST', 'PrimeNG', 'Gitlab', 'Jenkins', 'SCRUM'],
-        myRole: 'Full Stack Developer',
-        description: \`J'ai été responsable du développement front-end à 100% d'une application Angular,
-          en conduisant les migrations successives de la version 11 à 14.
-          Mon travail a consisté à développer tous les écrans en respectant scrupuleusement
-          les maquettes UX/UI avec la bibliothèque interne Ds-Tools, et à moderniser les fonctionnalités
-          existantes en les migrant de Drupal vers Angular avec des améliorations.
-          Pour optimiser l'architecture, j'ai créé un service générique de CRUD basé sur une
-          classe abstraite et développé des modules complexes
-          (gestion d'adresses française/étrangère, code postal intelligent avec comportement dynamique).
-          J'ai également contribué à la bibliothèque interne en améliorant
-          des composants génériques (inputs, datepickers) et en créant un steppeur de formulaires réutilisable,
-          utilisé notamment pour les formulaires Santé et Prévoyance intégrant un service IA de pré-remplissage. Enfin,
-        j'ai assuré la performance via un module de cache et mis en place le
-        tracking complet de l'application avec Tag Commander.\`
-};`
+      name: '${$localize`:@@proj.cacf.name:Application interne`}',
+      tools: ['Angular 10', 'Java', 'REST', 'JEST', 'PrimeNG', 'Gitlab', 'Jenkins', 'SCRUM'],
+      myRole: '${$localize`:@@proj.role.fullstack:Full Stack Developer`}',
+      description: \`${$localize`:@@proj.cacf.desc:Responsable Front-end (Angular 10), j'ai assuré la refonte complète de l'application en migrant les services Drupal vers une architecture Angular moderne. J'ai conçu des modules métier avancés (formulaires intelligents, services CRUD abstraits) et enrichi le Design System interne via PrimeNG. Optimisation des performances via une stratégie de cache et intégration du tracking utilisateur avec Tag Commander.`}\`
+    };`,
   }
-]
+];

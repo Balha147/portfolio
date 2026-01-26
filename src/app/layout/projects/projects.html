@@ -1,22 +1,23 @@
-<section id="projects" class="relative py-16 py-16 lg:py-24">
-  <div class="text-center mb-12 lg:mb-16">
-    <h2 class="text-3xl lg:text-4xl font-bold text-[var(--text-primary)]">Projects</h2>
+<section id="projects" class="relative py-12 lg:py-20 scroll-mt-20">
+  <header class="text-center mb-24 relative z-10">
+    <h2 i18n="@@projects.title" class="text-5xl lg:text-7xl font-black tracking-tighter text-[var(--text-main)]">
+      Projets
+    </h2>
+    <div class="mt-6 mx-auto h-1.5 w-24 rounded-full bg-[var(--btn-gradient)]"></div>
+  </header>
 
-    <div class="mt-4 mx-auto h-1 w-20 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--accent)]"
-    ></div>
-  </div>
-  <div class="flex flex-col gap-16 max-w-4xl mx-auto">
-    @for (p of projects; track p.title; let i = $index) {
-      <div
-        class="sticky w-full"
-        [style.top.px]="100 + (i * 30)"
-        style="height: fit-content;"
-      >
+<div class="flex flex-col gap-12 lg:gap-16 mx-auto px-4">
+  @for (p of projects; track p.title; let i = $index) {
+    <div
+      class="md:sticky w-full transition-all duration-500"
+      [style.top.px]="80 + (i * 25)"
+      [style.zIndex]="i"
+    >
         <app-terminal-cmd
           [projectTitle]="p.title"
           [text]="p.code"
           [animate]="false" />
-      </div>
-    }
-  </div>
+    </div>
+  }
+</div>
 </section>

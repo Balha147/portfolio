@@ -6,7 +6,6 @@ import { PROJECTS } from './project.config';
   selector: 'app-projects',
   imports: [TerminalCmd],
   templateUrl: './projects.html',
-  styleUrl: './projects.scss',
 })
 export class Projects {
   projects = PROJECTS;

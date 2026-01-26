@@ -1,13 +1,13 @@
 <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none">
-  <span class="text-[var(--text-soft)] block mb-2 font-medium opacity-80">
-    Hello, moi c'est
+  <span i18n="@@hero.greeting" class="text-[var(--text-soft)] block mb-2 font-medium opacity-80">
+    Hello, je suis
   </span>
 
   <span class="bg-[linear-gradient(90deg,oklch(63.32%_.24_31.68)_0%,oklch(69.02%_.277_332.77)_50%,oklch(53.18%_.28_296.97)_100%)] bg-clip-text text-transparent inline-block">
     Mohamed Hedi Basly
   </span>
 
-  <span class="block text-2xl sm:text-4xl lg:text-5xl text-[var(--text-main)] mt-4 font-semibold opacity-90">
+  <span i18n="@@hero.jobTitle" class="block text-2xl sm:text-4xl lg:text-5xl text-[var(--text-main)] mt-4 font-semibold opacity-90">
     Développeur Logiciel
   </span>
 </h1>
@@ -34,15 +34,15 @@
     class="group relative inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-full border-2 border-[var(--primary)] text-[var(--primary)] font-bold uppercase tracking-widest text-xs md:text-sm overflow-hidden transition-all duration-300 hover:text-white">
     <div class="absolute inset-0 bg-[var(--primary)] translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300 -z-10"></div>
 
-    <span>Contactez-moi</span>
+    <span i18n="@@hero.btn.contact">Contactez-moi</span>
     <fa-icon [icon]="['fas', 'user-group']" class="transition-transform group-hover:scale-110"></fa-icon>
   </a>
 
-  <a href="URL_DE_TON_CV"
-    target="_blank"
+  <a href="assets/pdf/MHB_CV.pdf"
+    download="MHB_CV.pdf"
     class="flex items-center gap-2 hover:gap-4 rounded-full px-6 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-bold uppercase tracking-widest text-white no-underline transition-all duration-300 ease-out shadow-lg hover:shadow-[0_10px_20px_rgba(99,102,241,0.3)]"
     style="background: var(--btn-gradient);">
-    <span>Télécharger CV</span>
+    <span i18n="@@hero.btn.downloadCv">Télécharger CV</span>
     <fa-icon [icon]="['fas', 'download']" class="animate-bounce group-hover:animate-none"></fa-icon>
   </a>
 </div>

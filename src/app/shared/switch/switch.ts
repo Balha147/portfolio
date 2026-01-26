@@ -4,7 +4,6 @@ import { Theme } from '../../core/theme.service';
 @Component({
   selector: 'app-switch',
   templateUrl: './switch.html',
-  styleUrl: './switch.scss',
 })
 export class Switch {
 

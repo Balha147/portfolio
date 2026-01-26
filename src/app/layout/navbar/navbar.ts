@@ -1,4 +1,4 @@
-import { Component, HostListener, inject, signal } from '@angular/core';
+import { Component, computed, inject, LOCALE_ID, signal } from '@angular/core';
 import { ThemeService } from '../../core/theme.service';
 import { Switch } from '../../shared/switch/switch';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -7,13 +7,24 @@ import { NAVBAR_CONFIG } from './navbar.config';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.html',
-  styleUrl: './navbar.scss',
   imports: [Switch, FontAwesomeModule]
 })
 export class Navbar {
   private readonly themeService = inject(ThemeService);
 
   theme = this.themeService.theme;
+
+  currentLang = computed(() => {
+    const path = window.location.pathname.toLowerCase();
+      if (path.includes('fr-fr') || path.includes('fr')) return 'FR';
+      if (path.includes('en-us') || path.includes('en')) return 'EN';
+      return 'FR';
+  });
+
+  languages = [
+    { code: 'fr', label: 'FRANÇAIS' },
+    { code: 'en', label: 'ENGLISH' }
+  ];
 
   scrolled = signal(false);
 
@@ -33,8 +44,16 @@ export class Navbar {
     this.menuOpen.set(false);
   }
 
-  @HostListener('window:scroll')
-  onScroll(): void {
-    this.scrolled.set(window.scrollY > 20);
+  switchLanguage(lang: string) {
+    const targetUrl = lang === 'fr' ? '/fr-FR/' : '/en-US/';
+
+    if (document.startViewTransition) {
+      document.startViewTransition(() => {
+        window.location.href = targetUrl;
+      });
+    } else {
+      window.location.href = targetUrl;
+    }
   }
+
 }

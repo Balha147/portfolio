@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+button {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}

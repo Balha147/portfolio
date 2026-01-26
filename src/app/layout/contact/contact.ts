@@ -3,7 +3,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-contact',
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule,],
   templateUrl: './contact.html',
 })
 export class Contact {

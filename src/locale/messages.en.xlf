@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+
+      <trans-unit id="nav.home" datatype="html">
+        <source>Accueil</source>
+        <target>Home</target>
+      </trans-unit>
+
+      <trans-unit id="nav.about" datatype="html">
+        <source>À propos</source>
+        <target>About</target>
+      </trans-unit>
+
+      <trans-unit id="nav.projects" datatype="html">
+        <source>Projets</source>
+        <target>Projects</target>
+      </trans-unit>
+
+      <trans-unit id="nav.contact" datatype="html">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+
+      <trans-unit id="nav.logo.subtitle" datatype="html">
+        <source>Portfolio</source>
+        <target>Portfolio</target>
+      </trans-unit>
+
+      <trans-unit id="hero.greeting" datatype="html">
+        <source>Hello, je suis</source>
+        <target>Hello, I am</target>
+      </trans-unit>
+
+      <trans-unit id="hero.jobTitle" datatype="html">
+        <source>Développeur Logiciel</source>
+        <target>Software Developer</target>
+      </trans-unit>
+
+      <trans-unit id="hero.btn.contact" datatype="html">
+        <source>Contactez-moi</source>
+        <target>Get in touch</target>
+      </trans-unit>
+
+      <trans-unit id="hero.btn.downloadCv" datatype="html">
+        <source>Télécharger CV</source>
+        <target>Download CV</target>
+      </trans-unit>
+
+      <trans-unit id="about.title" datatype="html">
+        <source>À Propos</source>
+        <target>About Me</target>
+      </trans-unit>
+
+      <trans-unit id="about.description" datatype="html">
+        <source>
+          Avec <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>6 ans<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> d&apos;expérience en
+          développement <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Front-End<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, je me suis
+          spécialisé dans l&apos;écosystème
+          <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/>Angular 17+<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> où j&apos;ai pu
+          mener divers projets à succès. J&apos;ai également acquis une bonne connaissance du côté
+          Back-End, notamment avec
+          <x id="START_TAG_SPAN_2" ctype="x-span" equiv-text="&lt;span&gt;"/>NestJS<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> et Java, ce qui me
+          permet d&apos;appréhender les défis techniques dans leur globalité. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/>
+          Mon travail se concentre sur la conception d&apos;applications web robustes et maintenables, avec
+          une attention particulière à la
+          <x id="START_TAG_SPAN_3" ctype="x-span" equiv-text="&lt;span&gt;"/>gestion d&apos;état<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
+          et à l&apos;expérience utilisateur. Ma compréhension des aspects Back-End facilite la
+          collaboration avec les différentes équipes et permet une intégration optimale des
+          <x id="START_TAG_SPAN_4" ctype="x-span" equiv-text="&lt;span&gt;"/>API REST/GraphQL<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/>
+          Attentif aux bonnes pratiques et aux évolutions technologiques, je cherche à contribuer à
+          des projets où je pourrais apporter à la fois mon expertise Front-End et ma vision
+          Full-Stack.
+        </source>
+        <target>
+          With <x id="START_TAG_SPAN" ctype="x-span"/>6 years<x id="CLOSE_TAG_SPAN" ctype="x-span"/> of experience in
+          <x id="START_TAG_SPAN" ctype="x-span"/>Front-End<x id="CLOSE_TAG_SPAN" ctype="x-span"/> development, I have
+          specialized in the
+          <x id="START_TAG_SPAN_1" ctype="x-span"/>Angular 17+<x id="CLOSE_TAG_SPAN" ctype="x-span"/> ecosystem where I have
+          led various successful projects. I have also acquired solid Back-End knowledge, particularly with
+          <x id="START_TAG_SPAN_2" ctype="x-span"/>NestJS<x id="CLOSE_TAG_SPAN" ctype="x-span"/> and Java, allowing me
+          to tackle technical challenges globally. <x id="LINE_BREAK" ctype="lb"/><x id="LINE_BREAK" ctype="lb"/>
+          My work focuses on designing robust and maintainable web applications, with
+          particular attention to
+          <x id="START_TAG_SPAN_3" ctype="x-span"/>state management<x id="CLOSE_TAG_SPAN" ctype="x-span"/>
+          and user experience. My understanding of Back-End aspects facilitates
+          collaboration with different teams and ensures optimal integration of
+          <x id="START_TAG_SPAN_4" ctype="x-span"/>REST/GraphQL APIs<x id="CLOSE_TAG_SPAN" ctype="x-span"/>. <x id="LINE_BREAK" ctype="lb"/><x id="LINE_BREAK" ctype="lb"/>
+          Attentive to best practices and technological developments, I seek to contribute to
+          projects where I can bring both my Front-End expertise and my Full-Stack vision.
+        </target>
+      </trans-unit>
+
+      </body>
+  </file>
+</xliff>

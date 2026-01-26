@@ -14,11 +14,6 @@ body {
     color 0.3s ease;
 }
 
-:root {
-  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --glow-primary: 129 140 248;
-  --glow-accent: 249 44 154;
-}
 
 :root[data-theme='light'] {
 
@@ -42,6 +37,7 @@ body {
   --btn-shadow: rgba(99, 102, 241, 0.3);
   --primary: #6366f1;
   --secondary: #06b6d4;
+  --badge-bg: #0369a1;
   --accent: #ec4899;
 
   --border-soft: #c7d2fe;
@@ -81,6 +77,7 @@ body {
   --btn-shadow: rgba(129, 140, 248, 0.4);
   --primary: #818cf8;
   --secondary: #16f2b3;
+  --badge-bg: #08dda1;
   --accent: #f92c9a;
 
   --border-soft: #1e293b;
@@ -110,14 +107,41 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.me {
-  background: linear-gradient(
-  90deg,
-  oklch(69.8% 0.19 164) 0%,
-  oklch(72.5% 0.17 202) 50%,
-  oklch(67.4% 0.17 235) 100%
-);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+::view-transition-old(root) {
+  animation: 0.4s cubic-bezier(0.4, 0, 0.2, 1) both fade-out,
+             0.4s cubic-bezier(0.4, 0, 0.2, 1) both scale-down;
 }
+
+::view-transition-new(root) {
+  animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
+
+@keyframes fade-out {
+  to { opacity: 0; }
+}
+@keyframes scale-down {
+  from { transform: scale(1); }
+  to { transform: scale(0.95); }
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100%);
+    filter: brightness(0.5);
+  }
+  to {
+    transform: translateX(0);
+    filter: brightness(1);
+  }
+}
+
+
+@layer base {
+  .dropdown-glass {
+    background: color-mix(in srgb, var(--navbar-bg) 80%, transparent);
+    border: 1px solid color-mix(in srgb, var(--border-soft) 50%, white 10%);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  }
+}
+
 

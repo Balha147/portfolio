@@ -4,7 +4,6 @@ import { SyntaxHighlight } from './syntax-highlight';
 @Component({
   selector: 'app-terminal-cmd',
   templateUrl: './terminal-cmd.html',
-  styleUrl: './terminal-cmd.scss',
   imports: [SyntaxHighlight]
 })
 export class TerminalCmd {
