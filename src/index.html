@@ -1,16 +1,100 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr" data-theme="dark">
+
 <head>
   <meta charset="utf-8">
-  <title>Portfolio</title>
+  <title>Hedi Basly — Senior Frontend Engineer Angular</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="description"
+    content="Portfolio de Hedi Basly, Senior Frontend Engineer : Angular, Signals, Design Systems, accessibilité, Agentic UI.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="author" content="Hedi Basly">
+  <meta name="theme-color" content="#0a0c10">
+  <link rel="canonical" href="https://balha147.github.io/portfolio/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hedi Basly">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://balha147.github.io/portfolio/">
+  <meta property="og:title" content="Hedi Basly — Senior Frontend Engineer Angular">
+  <meta property="og:description"
+    content="Portfolio de Hedi Basly, Senior Frontend Engineer : Angular, Signals, Design Systems, accessibilité, Agentic UI.">
+  <meta property="og:image" content="https://balha147.github.io/portfolio/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"
+    content="Hedi Basly, Senior Frontend Engineer : Angular, Signals, Design Systems, accessibilité">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hedi Basly — Senior Frontend Engineer Angular">
+  <meta name="twitter:description"
+    content="Portfolio de Hedi Basly, Senior Frontend Engineer : Angular, Signals, Design Systems, accessibilité, Agentic UI.">
+  <meta name="twitter:image" content="https://balha147.github.io/portfolio/og-image.png">
+  <meta name="twitter:image:alt"
+    content="Hedi Basly, Senior Frontend Engineer : Angular, Signals, Design Systems, accessibilité">
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var mq = function (q) { return window.matchMedia(q).matches; };
+      var get = function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } };
+      var t = get('theme');
+      if (t !== 'light' && t !== 'dark') t = mq('(prefers-color-scheme: light)') ? 'light' : 'dark';
+      root.setAttribute('data-theme', t);
+      var tc = document.querySelector('meta[name="theme-color"]');
+      if (tc) tc.setAttribute('content', t === 'light' ? '#f8f9fc' : '#0a0c10');
+      root.dataset.motion = mq('(prefers-reduced-motion: reduce)') ? 'reduced' : 'full';
+    })();
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://balha147.github.io/portfolio/#person",
+          "name": "Hedi Basly",
+          "alternateName": "Mohamed Hedi Basly",
+          "jobTitle": "Senior Frontend Engineer",
+          "description": "Senior Frontend Engineer spécialisé en Angular, Signals, Design Systems et accessibilité numérique.",
+          "url": "https://balha147.github.io/portfolio/",
+          "image": "https://balha147.github.io/portfolio/assets/images/me.webp",
+          "sameAs": [
+            "https://www.linkedin.com/in/mohamed-hedi-basly/",
+            "https://github.com/Balha147"
+          ],
+          "knowsAbout": [
+            "Angular",
+            "TypeScript",
+            "Angular Signals",
+            "Design Systems",
+            "Accessibilité numérique (RGAA, WCAG)",
+            "SSR et hydratation",
+            "Tailwind CSS",
+            "NestJS",
+            "Micro-frontends"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://balha147.github.io/portfolio/#website",
+          "url": "https://balha147.github.io/portfolio/",
+          "name": "Hedi Basly — Portfolio",
+          "inLanguage": "fr-FR",
+          "author": {
+            "@id": "https://balha147.github.io/portfolio/#person"
+          }
+        }
+      ]
+    }
+  </script>
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
 </html>

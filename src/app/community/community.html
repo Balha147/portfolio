@@ -1,0 +1,104 @@
+<section id="community" class="relative py-24 md:py-32 px-6 overflow-hidden
+         bg-[var(--bg-main)] text-[var(--text-main)]
+         transition-colors duration-500 border-t border-[var(--border-soft)]">
+
+    <div class="absolute inset-0 pointer-events-none opacity-60
+             bg-[radial-gradient(var(--grid-color)_1px,transparent_1px)]
+             [background-size:24px_24px]
+             [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_40%,transparent_100%)]">
+    </div>
+
+    <div class="absolute bottom-10 right-10
+             w-[400px] h-[400px] rounded-full
+             bg-[var(--primary)] opacity-[0.03] dark:opacity-[0.025]
+             blur-[120px] pointer-events-none">
+    </div>
+
+    <div class="max-w-7xl mx-auto w-full relative z-10">
+
+        <div class="flex items-center gap-3 mb-8">
+            <span class="text-xs font-mono uppercase tracking-[0.25em] text-[var(--primary-text)]">07.</span>
+            <span class="text-xs font-mono uppercase tracking-[0.25em] text-[var(--text-soft)]">Ecosystème & Continuous
+                Learning</span>
+            <div class="h-px bg-[var(--border-soft)] flex-1 max-w-[100px]"></div>
+        </div>
+
+        <div class="mb-16">
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter uppercase leading-none">
+                Veille, REX &<br />
+                <span class="bg-gradient-to-r from-[#ff5520] via-[#e85aa9] to-[#7657ff] bg-clip-text text-transparent">
+                    Thought Leadership
+                </span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            @for (item of activitiesConfig; track item.title) {
+            <div
+                class="group relative p-6 md:p-8 rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-card)]/50 backdrop-blur-sm transition-all duration-300 hover:border-[var(--border-strong)] flex flex-col justify-between">
+
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-[var(--border-soft)]">
+                        <span
+                            class="px-2.5 py-1 rounded-md text-[10px] font-mono uppercase tracking-wider bg-[var(--primary)]/10 text-[var(--primary-text)] border border-[var(--primary)]/20">
+                            {{ item.badge }}
+                        </span>
+                        <span class="text-xs font-mono text-[var(--text-muted)]">
+                            {{ item.type }}
+                        </span>
+                    </div>
+
+                    <h3
+                        class="text-2xl font-black tracking-tight text-[var(--text-main)] mb-1 group-hover:text-[var(--primary-text)] transition-colors">
+                        @if (item.url) {
+                        <a [href]="item.url" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2">
+                            <span>{{ item.title }}</span>
+                            <svg class="w-5 h-5 text-[var(--primary-text)] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+                        } @else {
+                        {{ item.title }}
+                        }
+                    </h3>
+
+                    <p class="text-xs font-mono text-[var(--primary-text)] mb-4">
+                        {{ item.subtitle }}
+                    </p>
+
+                    <p class="text-xs md:text-sm text-[var(--text-soft)] font-light leading-relaxed mb-6">
+                        {{ item.description }}
+                    </p>
+
+                    <ul class="space-y-2 mb-6">
+                        @for (highlight of item.highlights; track highlight) {
+                        <li class="flex items-start gap-2 text-xs text-[var(--text-soft)]">
+                            <span class="text-[var(--primary-text)] font-mono select-none">▸</span>
+                            <span>{{ highlight }}</span>
+                        </li>
+                        }
+                    </ul>
+                </div>
+
+                <div class="pt-4 border-t border-[var(--border-soft)]">
+                    <div class="flex flex-wrap gap-1.5">
+                        @for (tag of item.tags; track tag) {
+                        <span
+                            class="px-2 py-0.5 rounded bg-[var(--bg-main)] border border-[var(--border-soft)] text-[10px] font-mono text-[var(--text-muted)]">
+                            #{{ tag }}
+                        </span>
+                        }
+                    </div>
+                </div>
+
+            </div>
+            }
+
+        </div>
+
+    </div>
+</section>
