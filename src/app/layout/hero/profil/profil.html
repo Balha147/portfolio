@@ -1,0 +1,48 @@
+<h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none">
+  <span class="text-[var(--text-soft)] block mb-2 font-medium opacity-80">
+    Hello, moi c'est
+  </span>
+
+  <span class="bg-[linear-gradient(90deg,oklch(63.32%_.24_31.68)_0%,oklch(69.02%_.277_332.77)_50%,oklch(53.18%_.28_296.97)_100%)] bg-clip-text text-transparent inline-block">
+    Mohamed Hedi Basly
+  </span>
+
+  <span class="block text-2xl sm:text-4xl lg:text-5xl text-[var(--text-main)] mt-4 font-semibold opacity-90">
+    Développeur Logiciel
+  </span>
+</h1>
+
+<div class="my-12 flex lg:justify-start gap-5">
+  <a href="https://github.com/Balha147"
+    class="w-12 h-12 flex items-center justify-center rounded-xl bg-[var(--bg-card)] border border-[var(--border-soft)] text-[var(--text-main)] hover:text-white hover:bg-[var(--primary)] hover:border-[var(--primary)] hover:-translate-y-1 shadow-sm transition-all duration-300 group">
+    <fa-icon [icon]="['fab', 'github']" class="text-xl"></fa-icon>
+  </a>
+
+  <a href="https://www.linkedin.com/in/mohamed-hedi-basly/"
+    class="w-12 h-12 flex items-center justify-center rounded-xl bg-[var(--bg-card)] border border-[var(--border-soft)] text-[var(--text-main)] hover:text-white hover:bg-[#0077b5] hover:border-[#0077b5] hover:-translate-y-1 shadow-sm transition-all duration-300">
+    <fa-icon [icon]="['fab', 'linkedin']" class="text-xl"></fa-icon>
+  </a>
+
+  <a href="https://www.facebook.com/hediii93"
+    class="w-12 h-12 flex items-center justify-center rounded-xl bg-[var(--bg-card)] border border-[var(--border-soft)] text-[var(--text-main)] hover:text-white hover:bg-[#1877f2] hover:border-[#1877f2] hover:-translate-y-1 shadow-sm transition-all duration-300">
+    <fa-icon [icon]="['fab', 'facebook']" class="text-xl"></fa-icon>
+  </a>
+</div>
+
+<div class="mt-6 flex flex-wrap lg:justify-start gap-4">
+  <a href="#contact"
+    class="group relative inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-full border-2 border-[var(--primary)] text-[var(--primary)] font-bold uppercase tracking-widest text-xs md:text-sm overflow-hidden transition-all duration-300 hover:text-white">
+    <div class="absolute inset-0 bg-[var(--primary)] translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300 -z-10"></div>
+
+    <span>Contactez-moi</span>
+    <fa-icon [icon]="['fas', 'user-group']" class="transition-transform group-hover:scale-110"></fa-icon>
+  </a>
+
+  <a href="URL_DE_TON_CV"
+    target="_blank"
+    class="flex items-center gap-2 hover:gap-4 rounded-full px-6 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-bold uppercase tracking-widest text-white no-underline transition-all duration-300 ease-out shadow-lg hover:shadow-[0_10px_20px_rgba(99,102,241,0.3)]"
+    style="background: var(--btn-gradient);">
+    <span>Télécharger CV</span>
+    <fa-icon [icon]="['fas', 'download']" class="animate-bounce group-hover:animate-none"></fa-icon>
+  </a>
+</div>

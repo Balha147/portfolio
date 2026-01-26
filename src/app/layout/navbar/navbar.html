@@ -1,0 +1,107 @@
+<nav
+  class="fixed top-4 inset-x-4 z-50 transition-all duration-500"
+  [class.top-0]="scrolled()"
+  [class.inset-x-0]="scrolled()"
+>
+  <div
+    class="max-w-7xl mx-auto px-4 py-2 rounded-2xl border border-[var(--border-soft)] bg-[var(--navbar-bg)]/40 backdrop-blur-xl transition-all duration-500 shadow-lg"
+    [class.rounded-none]="scrolled()"
+  >
+    <div class="flex items-center justify-between h-14 md:h-16">
+      <div class="flex flex-1 md:flex-none justify-start items-center gap-4">
+        <div class="md:hidden">
+          <app-switch [theme]="theme()" (themeChanged)="onToggleTheme()"></app-switch>
+        </div>
+
+        <a href="#hero" class="hidden md:flex flex-col group">
+          <span class="text-xl font-black tracking-tighter text-[var(--text-main)]">
+            MHB<span class="text-[var(--primary)]">.</span>
+          </span>
+          <span class="text-[9px] font-bold uppercase tracking-widest text-[var(--text-soft)] -mt-1"
+            >Portfolio</span
+          >
+        </a>
+      </div>
+
+      <div class="flex flex-1 justify-center items-center">
+        <a href="#hero" (click)="closeMenu()" class="md:hidden flex flex-col items-center group">
+          <span class="text-xl font-black tracking-tighter text-[var(--text-main)]">
+            MHB<span class="text-[var(--primary)]">.</span>
+          </span>
+        </a>
+
+        <ul
+          class="hidden md:flex items-center gap-1 bg-[var(--bg-main)]/30 p-1 rounded-full border border-[var(--border-soft)]"
+        >
+          @for (item of navItems; track item.path) {
+            <li>
+              <a
+                [href]="item.path"
+                class="relative px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[var(--text-soft)] transition-all duration-300 group overflow-hidden"
+              >
+                <span
+                  class="absolute inset-0 bg-[var(--primary)]/10 scale-0 group-hover:scale-100 rounded-full transition-transform duration-300 -z-10"
+                ></span>
+
+                <span
+                  class="relative inline-block group-hover:-translate-y-0.5 group-hover:text-[var(--primary)] transition-all duration-300"
+                >
+                  {{ item.label }}
+                </span>
+
+                <span
+                  class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[var(--primary)] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                ></span>
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="flex flex-1 md:flex-none justify-end items-center gap-3">
+        <div class="hidden md:block">
+          <app-switch [theme]="theme()" (themeChanged)="onToggleTheme()"></app-switch>
+        </div>
+
+        <button
+          (click)="toggleMenu()"
+          class="md:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.2 rounded-xl bg-[var(--bg-card)] border border-[var(--border-soft)]"
+        >
+          <span
+            class="w-5 h-0.5 bg-[var(--text-main)] transition-all duration-300"
+            [class.rotate-45]="menuOpen()"
+            [class.translate-y-2]="menuOpen()"
+          ></span>
+          <span
+            class="w-5 h-0.5 bg-[var(--text-main)] transition-all duration-300"
+            [class.opacity-0]="menuOpen()"
+          ></span>
+          <span
+            class="w-5 h-0.5 bg-[var(--text-main)] transition-all duration-300"
+            [class.-rotate-45]="menuOpen()"
+            [class.-translate-y-2]="menuOpen()"
+          ></span>
+        </button>
+      </div>
+    </div>
+
+    @if (menuOpen()) {
+      <div
+        class="md:hidden mt-3 p-2 grid grid-cols-2 gap-2 animate-in fade-in zoom-in-95 duration-300"
+      >
+        @for (item of navItems; track item.path) {
+          <a
+            (click)="closeMenu()"
+            [href]="item.path"
+            class="flex flex-col items-center p-4 rounded-2xl bg-[var(--bg-main)]/80 border border-[var(--border-soft)]"
+          >
+            <span
+              class="text-[10px] font-black uppercase tracking-widest text-[var(--text-main)]"
+              >{{ item.label }}</span
+            >
+          </a>
+        }
+      </div>
+    }
+  </div>
+</nav>

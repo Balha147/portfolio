@@ -1,0 +1,115 @@
+<section id="experiences" class="relative py-16 py-16 lg:py-24">
+  <div class="text-center mb-12 lg:mb-16">
+    <h2 class="text-3xl lg:text-4xl font-bold uppercase text-[var(--text-primary)]">Experiences</h2>
+
+    <div
+      class="mt-4 mx-auto h-1 w-20 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--accent)]"
+    ></div>
+  </div>
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div class="hidden lg:flex justify-center items-center order-2 lg:order-1 py-12">
+        <div class="relative w-full max-w-md h-[450px] flex items-center justify-center">
+          <div
+            class="absolute inset-0 bg-[var(--primary)] opacity-[0.15] dark:opacity-[0.1] blur-[120px] rounded-full"
+          ></div>
+
+          <div class="relative w-full h-full" style="perspective: 2000px">
+            <div
+              class="absolute top-[15%] left-[5%] w-72 h-44 bg-[var(--bg-card)]/80 backdrop-blur-md border border-[var(--border-soft)] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] dark:shadow-2xl transform rotate-x-[25deg] rotate-y-[-15deg] rotate-z-[5deg] animate-float-slow opacity-70 group hover:opacity-100 transition-opacity"
+            >
+              <div class="p-5 flex flex-col h-full">
+                <div class="flex justify-between items-start mb-2">
+                  <span class="text-xs font-bold text-[var(--text-soft)] uppercase tracking-wider"
+                    >2013 - 2016</span
+                  >
+                  <img
+                    src="assets/images/fst.jpg"
+                    alt="FST"
+                    class="w-8 h-8 rounded-lg object-cover grayscale opacity-50"
+                  />
+                </div>
+                <h4 class="text-sm font-bold text-[var(--text-main)] leading-tight mb-1">
+                  Licence Fondamentale
+                </h4>
+                <p class="text-[11px] text-[var(--text-soft)] font-medium">
+                  FST Tunis • Génie Logiciel
+                </p>
+                <div class="mt-auto flex items-center gap-2">
+                  <div class="h-1.5 w-full bg-[var(--text-soft)]/10 rounded-full overflow-hidden">
+                    <div class="h-full w-full bg-[var(--text-soft)]/30"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="absolute top-[35%] left-[20%] w-80 h-52 bg-[var(--bg-card)] border-2 border-[var(--primary)] dark:border-[var(--primary)]/50 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] dark:shadow-[0_20px_60px_rgba(var(--primary-rgb),0.3)] transform rotate-x-[25deg] rotate-y-[-15deg] rotate-z-[5deg] animate-float-fast z-30 group hover:scale-105 transition-transform duration-500"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent pointer-events-none rounded-2xl"
+              ></div>
+
+              <div class="p-6 flex flex-col h-full relative z-10">
+                <div class="flex justify-between items-start mb-4">
+                  <div
+                    class="px-3 py-1 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] text-[10px] font-black uppercase tracking-widest border border-[var(--primary)]/20"
+                  >
+                    {{ '2016 - 2019' }}
+                  </div>
+                  <img
+                    src="assets/images/esprit.png"
+                    alt="ESPRIT"
+                    class="w-12 h-12 rounded-xl object-contain shadow-sm bg-white p-1"
+                  />
+                </div>
+
+                <div class="space-y-1">
+                  <h3
+                    class="text-lg font-black leading-tight bg-[linear-gradient(90deg,oklch(63.32%_.24_31.68)_0%,oklch(69.02%_.277_332.77)_50%,oklch(53.18%_.28_296.97)_100%)] bg-clip-text text-transparent"
+                  >
+                    Ingénieur en Génie Informatique
+                  </h3>
+                  <p class="text-sm font-bold text-[var(--text-main)]">ESPRIT</p>
+                  <p class="text-xs text-[var(--text-soft)] italic">Spécialité Web & Mobile</p>
+                </div>
+
+                <div class="mt-auto flex items-center justify-between">
+                  <span
+                    class="flex items-center gap-1.5 text-[10px] font-bold text-emerald-500 uppercase"
+                  >
+                    <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Diplômé
+                  </span>
+                  <div
+                    class="text-[var(--primary)] opacity-40 group-hover:opacity-100 transition-opacity"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-6 order-1 lg:order-2">
+        @for (edu of educationsConfig; track edu.title) {
+          <app-card [config]="edu" />
+        }
+      </div>
+    </div>
+  </div>
+</section>

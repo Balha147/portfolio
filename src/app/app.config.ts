@@ -1,12 +1,19 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
+import { APP_INITIALIZER, ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
-
 import { routes } from './app.routes';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { initializeFontAwesome } from './fontawesome.config';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideRouter(routes)
+    provideRouter(routes),
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeFontAwesome,
+      deps: [FaIconLibrary],
+      multi: true
+    }
   ]
 };

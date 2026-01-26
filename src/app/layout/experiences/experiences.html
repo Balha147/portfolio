@@ -1,0 +1,87 @@
+<section id="experiences" class="relative py-16 py-16 lg:py-24">
+  <div class="text-center mb-12 lg:mb-16">
+    <h2 class="text-3xl lg:text-4xl uppercase font-bold text-[var(--text-primary)]">Experiences</h2>
+
+    <div
+      class="mt-4 mx-auto h-1 w-20 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--accent)]"
+    ></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div class="hidden lg:flex justify-center items-center order-2 lg:order-1 py-12">
+        <div class="relative w-72 h-72 sm:w-[450px] sm:h-[450px] flex items-center justify-center">
+          <div
+            class="absolute inset-0 bg-[var(--primary)] opacity-[0.15] dark:opacity-[0.1] blur-[100px] rounded-full"
+          ></div>
+
+          <div
+            class="absolute w-full h-full border-2 border-dashed border-[var(--text-soft)] opacity-40 dark:opacity-20 rounded-full animate-spin-slow"
+          >
+            <div
+              class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 sm:p-4 bg-[var(--bg-card)] border-2 border-[var(--primary)] rounded-2xl shadow-lg animate-counter-spin"
+            >
+              <img
+                src="assets/images/lcl.jpg"
+                alt="LCL"
+                class="w-10 h-10 sm:w-14 sm:h-14 object-contain"
+              />
+              <div class="absolute -top-2 -right-2 flex h-4 w-4">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border border-white dark:border-slate-900"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="absolute w-2/3 h-2/3 border border-[var(--primary)] opacity-40 dark:opacity-20 rounded-full shadow-[0_0_15px_rgba(var(--primary-rgb),0.1)]"
+          ></div>
+
+          <div
+            class="absolute top-1/6 left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 sm:p-4 bg-[var(--bg-card)] border border-[var(--border-soft)] rounded-2xl shadow-[var(--shadow-soft)] hover:scale-110 transition-transform duration-300 z-20"
+          >
+            <img
+              src="assets/images/MH.png"
+              alt="Moët Hennessy"
+              class="w-8 h-8 sm:w-12 sm:h-12 object-contain"
+            />
+          </div>
+
+          <div
+            class="absolute bottom-1/6 left-1/2 -translate-x-1/2 translate-y-1/2 p-3 sm:p-4 bg-[var(--bg-card)] border border-[var(--border-soft)] rounded-2xl shadow-[var(--shadow-soft)] hover:scale-110 transition-transform duration-300 z-20"
+          >
+            <img
+              src="assets/images/cacf.jpg"
+              alt="CACF"
+              class="w-8 h-8 sm:w-12 sm:h-12 object-contain"
+            />
+          </div>
+
+          <div
+            class="relative z-10 w-24 h-24 sm:w-32 sm:h-32 bg-[var(--bg-card)] border border-[var(--border-soft)] rounded-[2.5rem] shadow-[var(--shadow-soft)] flex flex-col items-center justify-center overflow-hidden"
+          >
+            <span
+              class="text-[10px] font-bold text-[var(--text-soft)] uppercase tracking-[0.2em] mb-1"
+              >Portfolio</span
+            >
+            <span
+              class="text-2xl sm:text-3xl font-black bg-[linear-gradient(90deg,oklch(63.32%_.24_31.68)_0%,oklch(69.02%_.277_332.77)_50%,oklch(53.18%_.28_296.97)_100%)] bg-clip-text text-transparent"
+            >
+              PRO
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-6 order-1 lg:order-2">
+        @for (exp of experiencesConfig; track exp.clientName) {
+          <app-card [config]="exp" />
+        }
+      </div>
+    </div>
+  </div>
+</section>

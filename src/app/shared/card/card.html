@@ -1,0 +1,56 @@
+<article
+  class="glow-card group relative w-full bg-[var(--bg-card)] border border-[var(--border-soft)] rounded-2xl transition-all duration-300 hover:border-[var(--primary)] hover:shadow-[var(--shadow-soft)] overflow-hidden"
+>
+  <div class="p-5 sm:p-8">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+      <div class="flex items-center gap-4">
+        <div
+          class="flex-shrink-0 w-12 h-12 bg-white rounded-xl p-2 shadow-sm border border-[var(--border-soft)] group-hover:scale-110 transition-transform"
+        >
+          <img
+            [src]="'assets/images/' + config().imageName"
+            [alt]="config().clientName"
+            class="w-full h-full object-contain"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span
+            class="text-[10px] font-bold uppercase tracking-widest text-[var(--primary)] bg-[var(--primary)]/10 px-2 py-0.5 rounded w-fit"
+          >
+            {{ config().status }}
+          </span>
+        </div>
+      </div>
+
+      <span
+        class="text-[11px] font-medium text-[var(--text-soft)] bg-[var(--bg-main)] px-3 py-1 rounded-full border border-[var(--border-soft)] self-start sm:self-center"
+      >
+        {{ config().date }}
+      </span>
+    </div>
+
+    <h3
+      class="text-xl sm:text-2xl font-bold text-[var(--text-main)] mb-3 group-hover:text-[var(--primary)] transition-colors"
+    >
+      {{config().type === 'education' ? 'Etudiant' : 'Software Engineer'}}
+    </h3>
+
+    <div class="flex items-center gap-2 flex-wrap">
+      <span class="text-sm text-[var(--text-soft)]">{{config().type === 'education' ? 'Étudier à: ' : 'Mission pour'}}</span>
+      <a
+        [href]="config().linkApp"
+        target="_blank"
+        class="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--secondary)] hover:text-[var(--primary)] transition-all group/link underline-offset-4 hover:underline"
+      >
+        {{ config().clientName }} / {{ config().appName }}
+        <i
+          class="fas fa-external-link-alt text-[10px] transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform"
+        ></i>
+      </a>
+    </div>
+  </div>
+
+  <div
+    class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] group-hover:w-full transition-all duration-500"
+  ></div>
+</article>

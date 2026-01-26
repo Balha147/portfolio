@@ -1,0 +1,17 @@
+<section
+  id="hero"
+  class="w-full min-h-[200px] bg-[var(--bg-section)] px-6 sm:px-8 lg:px-20 py-16 lg:py-24
+         mt-20 md:mt-24"
+>
+  <div class="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+    <div class="order-1 lg:order-2 flex justify-center min-h-[320px] w-full">
+      <div class="w-full max-w-xl">
+        <app-terminal-cmd [text]="text" />
+      </div>
+    </div>
+
+    <div class="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
+      <app-profil />
+    </div>
+  </div>
+</section>

@@ -1,1 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+@use "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --glow-primary: 129 140 248;
+  --glow-accent: 249 44 154;
+}
+
+:root[data-theme='light'] {
+
+  --code-keyword: #0000ff;
+  --code-string: #a31515;
+  --code-number: #098658;
+  --code-id: #001080;
+  --code-op: #000000;
+  --code-symbol: #3b3b3b;
+
+  --bg-main: #eef2ff;
+  --bg-card: #edf3fe;
+
+  --glow-primary: 99 102 241;
+  --glow-accent: 236 72 153;
+
+  --text-main: #0f172a;
+  --text-soft: #475569;
+
+  --btn-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  --btn-shadow: rgba(99, 102, 241, 0.3);
+  --primary: #6366f1;
+  --secondary: #06b6d4;
+  --accent: #ec4899;
+
+  --border-soft: #c7d2fe;
+  --shadow-soft: 0 12px 30px rgba(99, 102, 241, 0.15);
+
+  --navbar-bg: rgba(238, 242, 255, 0.85);
+  --navbar-bg-scrolled: rgba(238, 242, 255, 0.95);
+
+  --terminal-bg: #edf3fe;
+  --terminal-border: #cbd5e1;
+  --terminal-header: #f1f5f9;
+
+  --primary-rgb: 99 102 241;
+  --secondary-rgb: 6 182 212;
+
+  --logo-gradient: linear-gradient(135deg, #10b981, #06b6d4);
+}
+
+:root[data-theme='dark'] {
+  --bg-main: #020617;
+  --bg-card: #0f172a;
+
+  --code-keyword: #569cd6;
+  --code-string: #ce9178;
+  --code-number: #b5cea8;
+  --code-id: #9cdcfe;
+  --code-op: #d4d4d4;
+  --code-symbol: #808080;
+
+  --glow-primary: 129 140 248;
+  --glow-accent: 249 44 154;
+
+  --text-main: #f8fafc;
+  --text-soft: #94a3b8;
+
+  --btn-gradient: linear-gradient(135deg, #818cf8 0%, #6366f1 50%, #4f46e5 100%);
+  --btn-shadow: rgba(129, 140, 248, 0.4);
+  --primary: #818cf8;
+  --secondary: #16f2b3;
+  --accent: #f92c9a;
+
+  --border-soft: #1e293b;
+  --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.6);
+
+  --navbar-bg: rgba(2, 6, 23, 0.85);
+  --navbar-bg-scrolled: rgba(2, 6, 23, 0.95);
+
+  --terminal-bg: #020617;
+  --terminal-border: #1e293b;
+
+  --primary-rgb: 129 140 248;
+  --secondary-rgb: 34 211 238;
+
+  --logo-gradient: linear-gradient(135deg, #2dd4bf, #818cf8);
+}
+
+.angular {
+    background: linear-gradient(90deg, oklch(63.32% .24 31.68) 0%, oklch(69.02% .277 332.77) 50%, oklch(53.18% .28 296.97) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nest {
+  background: linear-gradient(90deg, #ea2845 0%, #ea2868 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.me {
+  background: linear-gradient(
+  90deg,
+  oklch(69.8% 0.19 164) 0%,
+  oklch(72.5% 0.17 202) 50%,
+  oklch(67.4% 0.17 235) 100%
+);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

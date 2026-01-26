@@ -1,0 +1,116 @@
+<section id="contact" class="relative py-16 lg:py-24 overflow-hidden">
+  <div class="text-center mb-12 lg:mb-16">
+    <h2 class="text-3xl lg:text-4xl font-bold uppercase text-[var(--text-main)]">Donnons vie à vos idées</h2>
+    <div
+      class="mt-4 mx-auto h-1 w-20 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--accent)]"
+    ></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+      <div
+        class="md:col-span-2 md:row-span-2 bg-[var(--bg-card)] border border-[var(--border-soft)] rounded-[2.5rem] p-8 lg:p-10 shadow-2xl relative overflow-hidden order-1"
+      >
+        <form class="space-y-5 relative z-10 flex flex-col h-full">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input
+              type="text"
+              placeholder="Nom"
+              class="w-full bg-[var(--bg-main)]/50 border border-[var(--border-soft)] rounded-2xl px-5 py-4 text-[var(--text-main)] focus:border-[var(--primary)] outline-none transition-all placeholder:text-[var(--text-soft)]/50"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="w-full bg-[var(--bg-main)]/50 border border-[var(--border-soft)] rounded-2xl px-5 py-4 text-[var(--text-main)] focus:border-[var(--primary)] outline-none transition-all placeholder:text-[var(--text-soft)]/50"
+            />
+          </div>
+          <textarea
+            rows="5"
+            placeholder="Parlez-moi de votre projet..."
+            class="w-full bg-[var(--bg-main)]/50 border border-[var(--border-soft)] rounded-2xl px-5 py-4 text-[var(--text-main)] focus:border-[var(--primary)] outline-none transition-all resize-none placeholder:text-[var(--text-soft)]/50"
+          ></textarea>
+
+          <button
+            type="submit"
+            class="w-full cursor-pointer flex items-center justify-center gap-2 hover:gap-4 rounded-full px-8 py-4 text-center text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 shadow-[0_10px_20px_-5px_var(--btn-shadow)] hover:shadow-[0_15px_30px_-5px_var(--btn-shadow)]"
+            style="background: var(--btn-gradient)"
+          >
+            <span>Envoyer le message</span>
+            <fa-icon [icon]="['fas', 'paper-plane']"></fa-icon>
+          </button>
+        </form>
+      </div>
+
+      <div
+        class="bg-[var(--primary)] rounded-[2.5rem] p-8 flex flex-col justify-between text-white shadow-xl group cursor-pointer hover:scale-[1.02] transition-transform order-2 min-h-[160px]"
+      >
+        <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-xl">
+          <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+        </div>
+        <div>
+          <p class="text-xs font-bold uppercase opacity-70 mb-1">Email</p>
+          <p class="text-sm font-bold break-all text-white">{{ person.email }}</p>
+        </div>
+      </div>
+
+      <div
+        class="bg-[var(--bg-card)] border border-[var(--border-soft)] rounded-[2.5rem] p-8 flex flex-col items-center justify-center text-center gap-3 order-3 group hover:border-[var(--primary)] transition-all"
+      >
+        <div class="relative">
+          <div
+            class="absolute inset-0 rounded-full bg-[var(--primary)] opacity-20 animate-ping"
+          ></div>
+          <div
+            class="relative w-12 h-12 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] flex items-center justify-center shadow-sm"
+          >
+            <fa-icon [icon]="['fas', 'phone']" class="animate-bounce"></fa-icon>
+          </div>
+        </div>
+        <p class="text-sm font-black text-[var(--text-main)]">{{ person.tel }}</p>
+      </div>
+
+      <div
+        class="relative bg-[var(--bg-card)] border border-[var(--border-soft)] rounded-[2.5rem] overflow-hidden order-4 group h-[200px] md:h-auto min-h-[180px]"
+      >
+        <iframe
+          class="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700 opacity-50 group-hover:opacity-100"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10509.32410657929!2d2.2530122!3d48.8014244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671230fecf221%3A0x400b3281a08b3e40!2sClamart!5e0!3m2!1sfr!2sfr!4v1710000000000!5m2!1sfr!2sfr"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+        <div
+          class="absolute bottom-4 left-4 right-4 bg-white/80 dark:bg-black/80 backdrop-blur-md p-3 rounded-2xl border border-white/20 pointer-events-none"
+        >
+          <p class="text-[10px] font-black uppercase tracking-widest text-[var(--primary)]">
+            Localisation
+          </p>
+          <p class="text-xs font-bold text-[var(--text-main)]">{{ person.adress }}</p>
+        </div>
+      </div>
+
+      <div
+        class="bg-[var(--bg-card)] border border-[var(--border-soft)] rounded-[2.5rem] p-8 flex flex-col justify-between order-5 group hover:border-[var(--primary)] transition-all"
+      >
+        <div class="flex justify-around items-center h-full gap-4">
+          <a
+            [href]="person.github"
+            class="w-12 h-12 rounded-xl bg-[var(--bg-main)] flex items-center justify-center text-2xl text-[var(--text-soft)] hover:text-[var(--primary)] hover:scale-110 transition-all shadow-sm"
+          >
+            <fa-icon [icon]="['fab', 'github']"></fa-icon>
+          </a>
+          <a
+            [href]="person.linkedIn"
+            class="w-12 h-12 rounded-xl bg-[var(--bg-main)] flex items-center justify-center text-2xl text-[var(--text-soft)] hover:text-[#0077b5] hover:scale-110 transition-all shadow-sm"
+          >
+            <fa-icon [icon]="['fab', 'linkedin']"></fa-icon>
+          </a>
+        </div>
+        <p class="text-[10px] font-black text-center text-[var(--text-soft)] uppercase mt-4">
+          Connectons-nous
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

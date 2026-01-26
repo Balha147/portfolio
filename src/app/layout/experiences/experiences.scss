@@ -1,0 +1,16 @@
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .animate-spin-slow {
+    animation: spin-slow 25s linear infinite;
+  }
+
+  /* Contre-rotation pour garder le logo LCL droit */
+  @keyframes counter-spin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(-360deg); }
+  }
+  .animate-counter-spin {
+    animation: counter-spin 25s linear infinite;
+  }

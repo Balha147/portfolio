@@ -1,0 +1,44 @@
+<footer class="relative w-full py-12 border-t border-[var(--border-soft)] bg-[var(--bg-main)] transition-colors duration-500">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-20">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+
+      <div class="flex flex-col items-center md:items-start space-y-2">
+        <div class="flex items-center gap-2 group">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] flex items-center justify-center text-white font-black text-xs shadow-lg group-hover:rotate-12 transition-transform duration-300">
+            M
+          </div>
+          <span class="text-xl font-black tracking-tighter text-[var(--text-main)]">
+            MHB<span class="text-[var(--primary)]">.</span>
+          </span>
+        </div>
+        <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-[var(--text-soft)]">
+          Concepteur Digital • 2026
+        </p>
+      </div>
+
+      <div class="px-4 py-2 rounded-full border border-[var(--border-soft)] bg-[var(--bg-card)]/50 backdrop-blur-sm flex items-center gap-3">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span class="text-[11px] font-bold uppercase tracking-widest text-[var(--text-main)]">
+          Disponible pour de nouveaux défis
+        </span>
+      </div>
+
+      <div class="text-center md:text-right">
+        <p class="text-sm font-medium text-[var(--text-main)]">
+          Fait avec passion à <span class="italic text-[var(--primary)]">Paris</span>
+        </p>
+        <p class="text-[10px] text-[var(--text-soft)] mt-1 uppercase tracking-tighter">
+          &copy; {{ currentYear }} Tous droits réservés
+        </p>
+      </div>
+
+    </div>
+
+    <div class="mt-12 w-full h-px bg-gradient-to-r from-transparent via-[var(--border-soft)] to-transparent relative">
+        <div class="absolute inset-0 bg-[var(--primary)] blur-sm opacity-20 transition-opacity peer-checked:opacity-40"></div>
+    </div>
+  </div>
+</footer>
