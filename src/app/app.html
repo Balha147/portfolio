@@ -1,12 +1,20 @@
+<a href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100]
+   focus:rounded-xl focus:bg-[var(--primary-solid)] focus:px-5 focus:py-3 focus:text-sm focus:font-bold focus:text-white">
+    Aller au contenu principal
+</a>
 <app-navbar />
-<app-hero />
-<app-about />
-<app-experiences />
-<app-skills />
-<app-projects />
-<app-educations />
-<app-contact />
+<main id="main-content" tabindex="-1">
+    <app-hero />
+    <app-about />
+    <app-skills />
+    <app-experiences />
+    <app-projects />
+    <app-educations />
+    <app-testimonials />
+    <app-community />
+    <app-contact />
+</main>
 <app-footer />
-
-
-<router-outlet />
+<app-scroll-to-top />
+<app-live-region />

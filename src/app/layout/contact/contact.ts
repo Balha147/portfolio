@@ -1,17 +1,42 @@
-import { Component } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {
+  Component,
+  ElementRef,
+  Injector,
+  afterNextRender,
+  inject,
+  signal,
+  viewChild,
+} from '@angular/core';
+
+import { Announcer } from '../../core/annoncer.service';
+import { SOCIAL_LINKS } from '../../shared/social-links';
 
 @Component({
   selector: 'app-contact',
-  imports: [FontAwesomeModule],
   templateUrl: './contact.html',
 })
 export class Contact {
-  person = {
-    email: 'baslymohamedhedi@gmail.com',
-    tel: '+33 6 25 82 93 14',
-    adress: 'Clamart, Paris FR',
-    github: 'https://github.com/Balha147',
-    linkedIn: 'https://www.linkedin.com/in/mohamed-hedi-basly/'
+  private readonly announcer = inject(Announcer);
+
+  readonly email = 'baslymohamedhedi@gmail.com';
+  readonly location = 'Clamart, Paris FR';
+  readonly socialLinks = SOCIAL_LINKS;
+
+  readonly copied = signal(false);
+
+  async copyEmail(): Promise<void> {
+    try {
+      await navigator.clipboard.writeText(this.email);
+
+      this.copied.set(true);
+
+      this.announcer.announce('Adresse e-mail copiée dans le presse-papiers.');
+
+      setTimeout(() => this.copied.set(false), 2000);
+    } catch {
+      this.announcer.announce(
+        "Copie impossible. Sélectionnez l'adresse e-mail manuellement."
+      );
+    }
   }
 }

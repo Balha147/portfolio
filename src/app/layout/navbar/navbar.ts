@@ -1,40 +1,45 @@
-import { Component, HostListener, inject, signal } from '@angular/core';
-import { ThemeService } from '../../core/theme.service';
-import { Switch } from '../../shared/switch/switch';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { NavIcon } from './nav-icon';
 import { NAVBAR_CONFIG } from './navbar.config';
+import { injectScrollSpy } from './scroll-spy';
+import { Switch } from '../../shared/switch/switch';
+import { Dock, DockItem } from './dock.directive';
+import { ThemeService } from '../../core/theme.service';
+import { injectScrollProgress } from './scroll-pregress';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.html',
-  styleUrl: './navbar.scss',
-  imports: [Switch, FontAwesomeModule]
+  imports: [Switch, NavIcon, Dock, DockItem],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { '(document:keydown.escape)': 'closeMenu()' },
 })
 export class Navbar {
   private readonly themeService = inject(ThemeService);
+  private readonly scroll = injectScrollProgress();
 
-  theme = this.themeService.theme;
+  readonly navItems = NAVBAR_CONFIG;
+  readonly theme = this.themeService.theme;
 
-  scrolled = signal(false);
+  readonly scrolled = this.scroll.scrolled;
+  readonly scrollProgress = this.scroll.progress;
+  readonly activeId = injectScrollSpy(this.navItems.map(({ path }) => path.slice(1)));
 
-  menuOpen = signal(false);
+  readonly menuOpen = signal(false);
 
-  navItems = NAVBAR_CONFIG;
+  isActive(path: string): boolean {
+    return path === '#' + this.activeId();
+  }
 
   onToggleTheme(): void {
     this.themeService.toggle();
   }
 
   toggleMenu(): void {
-    this.menuOpen.update(v => !v);
+    this.menuOpen.update((open) => !open);
   }
 
   closeMenu(): void {
     this.menuOpen.set(false);
-  }
-
-  @HostListener('window:scroll')
-  onScroll(): void {
-    this.scrolled.set(window.scrollY > 20);
   }
 }
