@@ -1,4 +1,4 @@
-<footer class="relative w-full py-12 border-t border-[var(--border-soft)] bg-[var(--bg-main)] transition-colors duration-500">
+<footer class="relative cursor-pointer w-full py-12 border-t border-[var(--border-soft)] bg-[var(--bg-main)] transition-colors duration-500">
   <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-20">
     <div class="flex flex-col md:flex-row justify-between items-center gap-8">
 
@@ -11,7 +11,7 @@
             MHB<span class="text-[var(--primary)]">.</span>
           </span>
         </div>
-        <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-[var(--text-soft)]">
+        <p i18n="@@footer.tagline" class="text-[11px] font-bold uppercase tracking-[0.3em] text-[var(--text-soft)]">
           Concepteur Digital • 2026
         </p>
       </div>
@@ -21,17 +21,17 @@
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
         </span>
-        <span class="text-[11px] font-bold uppercase tracking-widest text-[var(--text-main)]">
+        <span i18n="@@footer.availability" class="text-[11px] font-bold uppercase tracking-widest text-[var(--text-main)]">
           Disponible pour de nouveaux défis
         </span>
       </div>
 
       <div class="text-center md:text-right">
-        <p class="text-sm font-medium text-[var(--text-main)]">
+        <p i18n="@@footer.madeWith" class="text-sm font-medium text-[var(--text-main)]">
           Fait avec passion à <span class="italic text-[var(--primary)]">Paris</span>
         </p>
         <p class="text-[10px] text-[var(--text-soft)] mt-1 uppercase tracking-tighter">
-          &copy; {{ currentYear }} Tous droits réservés
+          &copy; {{ currentYear }} <ng-container i18n="@@footer.rights">Tous droits réservés</ng-container>
         </p>
       </div>
 

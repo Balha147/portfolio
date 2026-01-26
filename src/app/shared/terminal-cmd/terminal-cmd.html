@@ -1,10 +1,10 @@
-<div class="relative w-full max-w-2xl mx-auto rounded-xl border border-[var(--terminal-border)] bg-[var(--terminal-bg)] shadow-lg hover:shadow-2xl transition-all duration-500 group overflow-hidden">
+<div class="relative w-full max-w-3xl mx-auto rounded-xl border border-[var(--terminal-border)] bg-[var(--terminal-bg)] transition-all duration-500 group overflow-hidden flex flex-col">
 
-  <div class="flex items-center gap-4 px-4 py-3 border-b border-[var(--terminal-border)] bg-[var(--terminal-header)] backdrop-blur-md">
+  <div class="flex items-center gap-4 px-4 py-3 border-b border-[var(--terminal-border)] bg-[var(--terminal-header)]">
     <div class="flex gap-2">
-      <span class="h-3 w-3 rounded-full bg-[#ff5f56] hover:brightness-90 transition-all shadow-inner"></span>
-      <span class="h-3 w-3 rounded-full bg-[#ffbd2e] hover:brightness-90 transition-all shadow-inner"></span>
-      <span class="h-3 w-3 rounded-full bg-[#27c93f] hover:brightness-90 transition-all shadow-inner"></span>
+      <span class="h-3 w-3 rounded-full bg-[#ff5f56]" i18n-aria-label="@@terminal.close" aria-label="Fermer"></span>
+      <span class="h-3 w-3 rounded-full bg-[#ffbd2e]" i18n-aria-label="@@terminal.minimize" aria-label="Réduire"></span>
+      <span class="h-3 w-3 rounded-full bg-[#27c93f]" i18n-aria-label="@@terminal.maximize" aria-label="Agrandir"></span>
     </div>
 
     @if (projectTitle()) {
@@ -16,12 +16,7 @@
     }
   </div>
 
-  <pre class="px-6 py-8 font-mono text-xs md:text-sm leading-relaxed text-left text-[var(--text-main)] bg-[var(--terminal-bg)] whitespace-pre-wrap break-words min-h-[160px] selection:bg-[var(--primary)] selection:text-white">
+  <pre class="px-6 py-8 font-mono text-xs md:text-sm leading-relaxed text-left text-[var(--text-main)] whitespace-pre-wrap break-words">
     <code appSyntaxHighlight [text]="rawText()"></code>
-    @if (isTyping() && animate()) {
-      <span class="animate-pulse text-[var(--primary)] font-bold drop-shadow-[0_0_8px_var(--primary)]">|</span>
-    }
   </pre>
-
-  <div class="absolute bottom-0 left-0 h-[2px] w-full bg-gradient-to-r from-transparent via-[var(--primary)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 </div>

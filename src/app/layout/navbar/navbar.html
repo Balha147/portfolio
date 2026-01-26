@@ -1,13 +1,7 @@
-<nav
-  class="fixed top-4 inset-x-4 z-50 transition-all duration-500"
-  [class.top-0]="scrolled()"
-  [class.inset-x-0]="scrolled()"
->
-  <div
-    class="max-w-7xl mx-auto px-4 py-2 rounded-2xl border border-[var(--border-soft)] bg-[var(--navbar-bg)]/40 backdrop-blur-xl transition-all duration-500 shadow-lg"
-    [class.rounded-none]="scrolled()"
-  >
+<nav class="fixed top-4 inset-x-4 z-50 transition-all duration-500 cursor-pointer">
+  <div class="max-w-7xl mx-auto px-4 py-2 rounded-2xl border border-[var(--border-soft)] bg-[var(--navbar-bg)]/40 backdrop-blur-xl transition-all duration-500 shadow-lg">
     <div class="flex items-center justify-between h-14 md:h-16">
+
       <div class="flex flex-1 md:flex-none justify-start items-center gap-4">
         <div class="md:hidden">
           <app-switch [theme]="theme()" (themeChanged)="onToggleTheme()"></app-switch>
@@ -17,9 +11,9 @@
           <span class="text-xl font-black tracking-tighter text-[var(--text-main)]">
             MHB<span class="text-[var(--primary)]">.</span>
           </span>
-          <span class="text-[9px] font-bold uppercase tracking-widest text-[var(--text-soft)] -mt-1"
-            >Portfolio</span
-          >
+          <span i18n="@@nav.logo.subtitle" class="text-[9px] font-bold uppercase tracking-widest text-[var(--text-soft)] -mt-1">
+            Portfolio
+          </span>
         </a>
       </div>
 
@@ -30,28 +24,14 @@
           </span>
         </a>
 
-        <ul
-          class="hidden md:flex items-center gap-1 bg-[var(--bg-main)]/30 p-1 rounded-full border border-[var(--border-soft)]"
-        >
+        <ul class="hidden md:flex items-center gap-1 bg-[var(--bg-main)]/30 p-1 rounded-full border border-[var(--border-soft)]">
           @for (item of navItems; track item.path) {
             <li>
-              <a
-                [href]="item.path"
-                class="relative px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[var(--text-soft)] transition-all duration-300 group overflow-hidden"
-              >
-                <span
-                  class="absolute inset-0 bg-[var(--primary)]/10 scale-0 group-hover:scale-100 rounded-full transition-transform duration-300 -z-10"
-                ></span>
-
-                <span
-                  class="relative inline-block group-hover:-translate-y-0.5 group-hover:text-[var(--primary)] transition-all duration-300"
-                >
+              <a [href]="item.path" class="relative px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[var(--text-soft)] transition-all duration-300 group overflow-hidden">
+                <span class="absolute inset-0 bg-[var(--primary)]/10 scale-0 group-hover:scale-100 rounded-full transition-transform duration-300 -z-10"></span>
+                <span class="relative inline-block group-hover:-translate-y-0.5 group-hover:text-[var(--primary)] transition-all duration-300">
                   {{ item.label }}
                 </span>
-
-                <span
-                  class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[var(--primary)] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-                ></span>
               </a>
             </li>
           }
@@ -59,48 +39,68 @@
       </div>
 
       <div class="flex flex-1 md:flex-none justify-end items-center gap-3">
+
+        <div class="hidden md:block relative group">
+          <button class="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-[var(--border-soft)] bg-[var(--bg-card)]/50 hover:bg-[var(--primary)]/10 transition-all duration-300">
+            <span class="text-[10px] font-black tracking-widest uppercase text-[var(--text-main)]">{{ currentLang() }}</span>
+            <svg class="w-3 h-3 text-[var(--text-soft)] group-hover:rotate-180 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="absolute right-0 top-full mt-2 w-32 origin-top-right rounded-2xl border border-[var(--border-soft)] bg-[var(--navbar-bg)]/95 backdrop-blur-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-50 overflow-hidden p-1.5">
+            @for (lang of languages; track lang.code) {
+              <button (click)="switchLanguage(lang.code)"
+                class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-[10px] font-bold transition-all"
+                [class.bg-[var(--primary)]/15]="currentLang() === lang.code.toUpperCase()"
+                [class.text-[var(--primary)]]="currentLang() === lang.code.toUpperCase()"
+                [class.text-[var(--text-soft)]]="currentLang() !== lang.code.toUpperCase()"
+                [class.hover:bg-[var(--bg-main)]/50]="currentLang() !== lang.code.toUpperCase()">
+                {{ lang.label }}
+                @if (currentLang() === lang.code.toUpperCase()) {
+                  <span class="w-1.5 h-1.5 rounded-full bg-[var(--primary)] shadow-[0_0_8px_var(--primary)]"></span>
+                }
+              </button>
+            }
+          </div>
+        </div>
+
         <div class="hidden md:block">
           <app-switch [theme]="theme()" (themeChanged)="onToggleTheme()"></app-switch>
         </div>
 
-        <button
-          (click)="toggleMenu()"
-          class="md:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.2 rounded-xl bg-[var(--bg-card)] border border-[var(--border-soft)]"
-        >
-          <span
-            class="w-5 h-0.5 bg-[var(--text-main)] transition-all duration-300"
-            [class.rotate-45]="menuOpen()"
-            [class.translate-y-2]="menuOpen()"
-          ></span>
-          <span
-            class="w-5 h-0.5 bg-[var(--text-main)] transition-all duration-300"
-            [class.opacity-0]="menuOpen()"
-          ></span>
-          <span
-            class="w-5 h-0.5 bg-[var(--text-main)] transition-all duration-300"
-            [class.-rotate-45]="menuOpen()"
-            [class.-translate-y-2]="menuOpen()"
-          ></span>
+        <button (click)="toggleMenu()" class="md:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.2 rounded-xl bg-[var(--bg-card)] border border-[var(--border-soft)]">
+          <span class="sr-only" i18n="@@nav.menu.toggle">Menu</span>
+          <span class="w-5 h-0.5 bg-[var(--text-main)] transition-all duration-300" [class.rotate-45]="menuOpen()" [class.translate-y-2]="menuOpen()"></span>
+          <span class="w-5 h-0.5 bg-[var(--text-main)] transition-all duration-300" [class.opacity-0]="menuOpen()"></span>
+          <span class="w-5 h-0.5 bg-[var(--text-main)] transition-all duration-300" [class.-rotate-45]="menuOpen()" [class.-translate-y-2]="menuOpen()"></span>
         </button>
       </div>
     </div>
 
     @if (menuOpen()) {
-      <div
-        class="md:hidden mt-3 p-2 grid grid-cols-2 gap-2 animate-in fade-in zoom-in-95 duration-300"
-      >
-        @for (item of navItems; track item.path) {
-          <a
-            (click)="closeMenu()"
-            [href]="item.path"
-            class="flex flex-col items-center p-4 rounded-2xl bg-[var(--bg-main)]/80 border border-[var(--border-soft)]"
-          >
-            <span
-              class="text-[10px] font-black uppercase tracking-widest text-[var(--text-main)]"
-              >{{ item.label }}</span
-            >
-          </a>
-        }
+      <div class="md:hidden mt-3 p-2 flex flex-col gap-2 animate-in slide-in-from-top-4 fade-in duration-300">
+        <div class="grid grid-cols-2 gap-2">
+          @for (item of navItems; track item.path; let i = $index) {
+            <a (click)="closeMenu()" [href]="item.path" class="flex flex-col items-center p-4 rounded-2xl bg-[var(--bg-main)]/90 border border-[var(--border-soft)]">
+              <span class="text-[10px] font-black uppercase tracking-widest text-[var(--text-main)]">
+                {{ item.label }}
+              </span>
+            </a>
+          }
+        </div>
+
+        <div class="flex gap-1 p-1 bg-[var(--bg-card)]/30 rounded-2xl border border-[var(--border-soft)]">
+          @for (lang of languages; track lang.code) {
+            <button (click)="switchLanguage(lang.code)"
+              class="flex-1 py-3 rounded-xl text-[10px] font-black tracking-widest transition-all duration-300"
+              [class.bg-[var(--primary)]]="currentLang() === lang.code.toUpperCase()"
+              [class.text-white]="currentLang() === lang.code.toUpperCase()"
+              [class.text-[var(--text-soft)]]="currentLang() !== lang.code.toUpperCase()">
+              {{ lang.label }}
+            </button>
+          }
+        </div>
       </div>
     }
   </div>

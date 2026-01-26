@@ -5,7 +5,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   selector: 'app-profil',
   imports: [FontAwesomeModule],
   templateUrl: './profil.html',
-  styleUrl: './profil.scss',
 })
 export class Profil {
 

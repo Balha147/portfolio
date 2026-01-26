@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr-FR" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="about.title" datatype="html">
+        <source> A propos </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/about/about.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.imageAlt" datatype="html">
+        <source>Basly Mohamed Hedi</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/about/about.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.jobTitle" datatype="html">
+        <source> Senior Developer </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/about/about.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.whoAmI" datatype="html">
+        <source> Qui suis-je ? </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/about/about.html</context>
+          <context context-type="linenumber">54,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.description" datatype="html">
+        <source> Avec <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;font-bold text-[var(--text-main)]&quot;&gt;"/>6 ans<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> d&apos;expérience en développement <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;font-bold text-[var(--text-main)]&quot;&gt;"/>Front-End<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, je me suis spécialisé dans l&apos;écosystème <x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;angular font-semibold text-[var(--text-main)]&quot;&gt;"/>Angular 17+<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> où j&apos;ai pu mener divers projets à succès. J&apos;ai également acquis une bonne connaissance du côté Back-End, notamment avec <x id="START_TAG_SPAN_2" ctype="x-span_2" equiv-text="&lt;span class=&quot;nest font-semibold text-[var(--text-main)]&quot;&gt;"/>NestJS<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> et Java, ce qui me permet d&apos;appréhender les défis techniques dans leur globalité. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Mon travail se concentre sur la conception d&apos;applications web robustes et maintenables, avec une attention particulière à la <x id="START_TAG_SPAN_3" ctype="x-span_3" equiv-text="&lt;span
+          class=&quot;text-[var(--text-main)] font-medium underline decoration-[var(--primary)]/30 underline-offset-4&quot;
+          &gt;"/>gestion d&apos;état<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> et à l&apos;expérience utilisateur. Ma compréhension des aspects Back-End facilite la collaboration avec les différentes équipes et permet une intégration optimale des <x id="START_TAG_SPAN_4" ctype="x-span_4" equiv-text="&lt;span class=&quot;text-[var(--text-main)] font-medium&quot;&gt;"/>API REST/GraphQL<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Attentif aux bonnes pratiques et aux évolutions technologiques, je cherche à contribuer à des projets où je pourrais apporter à la fois mon expertise Front-End et ma vision Full-Stack. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/about/about.html</context>
+          <context context-type="linenumber">65,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.title" datatype="html">
+        <source> Donnons vie à vos idées </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/contact/contact.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.form.name" datatype="html">
+        <source>Nom</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/contact/contact.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.form.email" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/contact/contact.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.form.message" datatype="html">
+        <source>Parlez-moi de votre projet...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/contact/contact.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.form.submit" datatype="html">
+        <source>Envoyer le message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/contact/contact.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.label.email" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/contact/contact.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.label.location" datatype="html">
+        <source> Localisation </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/contact/contact.html</context>
+          <context context-type="linenumber">76,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.label.connect" datatype="html">
+        <source> Connectons-nous </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/contact/contact.html</context>
+          <context context-type="linenumber">98,100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edu.esprit.title" datatype="html">
+        <source>Ingénieur en Génie informatique</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/educations/educations.config.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edu.esprit.specialty" datatype="html">
+        <source>Spécialité Web &amp; Mobile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/educations/educations.config.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edu.status.graduated" datatype="html">
+        <source>Diplômé</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/educations/educations.config.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/educations/educations.config.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edu.fst.title" datatype="html">
+        <source>Licence fondamentale en informatique</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/educations/educations.config.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edu.fst.specialty" datatype="html">
+        <source>Génie Logiciel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/educations/educations.config.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="educations.title" datatype="html">
+        <source> Educations </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/educations/educations.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="educations.fst.degree" datatype="html">
+        <source> Licence Fondamentale </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/educations/educations.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="educations.fst.details" datatype="html">
+        <source> FST Tunis • Génie Logiciel </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/educations/educations.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="educations.esprit.degree" datatype="html">
+        <source> Ingénieur en Génie Informatique </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/educations/educations.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="educations.esprit.specialty" datatype="html">
+        <source>Spécialité Web &amp; Mobile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/educations/educations.html</context>
+          <context context-type="linenumber">52,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="educations.status.graduated" datatype="html">
+        <source>Diplômé</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/educations/educations.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experiences.title" datatype="html">
+        <source> Expériences </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/experiences/experiences.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.tagline" datatype="html">
+        <source> Concepteur Digital • 2026 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.html</context>
+          <context context-type="linenumber">15,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.availability" datatype="html">
+        <source> Disponible pour de nouveaux défis </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.madeWith" datatype="html">
+        <source> Fait avec passion à <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;italic text-[var(--primary)]&quot;&gt;"/>Paris<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.html</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.rights" datatype="html">
+        <source>Tous droits réservés</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.dev.role" datatype="html">
+        <source>Frontend Angular Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/hero/hero.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.greeting" datatype="html">
+        <source> Hello, je suis </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/hero/profil/profil.html</context>
+          <context context-type="linenumber">3,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.jobTitle" datatype="html">
+        <source> Développeur Logiciel </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/hero/profil/profil.html</context>
+          <context context-type="linenumber">11,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.btn.contact" datatype="html">
+        <source>Contactez-moi</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/hero/profil/profil.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.btn.downloadCv" datatype="html">
+        <source>Télécharger CV</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/hero/profil/profil.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.home" datatype="html">
+        <source>Accueil</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/navbar/navbar.config.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.about" datatype="html">
+        <source>À propos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/navbar/navbar.config.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.skills" datatype="html">
+        <source>Compétences</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/navbar/navbar.config.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.projects" datatype="html">
+        <source>Projets</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/navbar/navbar.config.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.contact" datatype="html">
+        <source>Contact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/navbar/navbar.config.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.logo.subtitle" datatype="html">
+        <source> Portfolio </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/navbar/navbar.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.menu.toggle" datatype="html">
+        <source>Menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/navbar/navbar.html</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="proj.lcl.title" datatype="html">
+        <source>Espace particulier / LCL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/projects/project.config.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="proj.role.fullstack" datatype="html">
+        <source>Full Stack Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/projects/project.config.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/projects/project.config.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/projects/project.config.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="proj.lcl.desc" datatype="html">
+        <source>Pilotage de la modernisation Full Stack du projet : migration Angular 15 vers 19, création d&apos;un Design System (Storybook) et intégration du CMS Prismic. Développement de formulaires complexes et de microservices Java/Spring Boot critiques (alertes, parrainage) avec mise en place du tracking analytique.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/projects/project.config.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="proj.mh.title" datatype="html">
+        <source>PPA / Malakoff Humanis (MH)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/projects/project.config.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="proj.mh.desc" datatype="html">
+        <source>Responsable du front-end (Angular 11 à 14), j&apos;ai piloté la migration de fonctionnalités Drupal vers Angular et optimisé l&apos;architecture via des services CRUD génériques. J&apos;ai conçu des modules complexes (gestion d&apos;adresses dynamique) et enrichi la bibliothèque interne (Ds-Tools) avec des composants réutilisables (steppeur IA, inputs). Performance assurée par un module de cache et tracking complet via Tag Commander.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/projects/project.config.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="proj.cacf.title" datatype="html">
+        <source>E-Animation / CACF</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/projects/project.config.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="proj.cacf.name" datatype="html">
+        <source>Application interne</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/projects/project.config.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="proj.cacf.desc" datatype="html">
+        <source>Responsable Front-end (Angular 10), j&apos;ai assuré la refonte complète de l&apos;application en migrant les services Drupal vers une architecture Angular moderne. J&apos;ai conçu des modules métier avancés (formulaires intelligents, services CRUD abstraits) et enrichi le Design System interne via PrimeNG. Optimisation des performances via une stratégie de cache et intégration du tracking utilisateur avec Tag Commander.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/projects/project.config.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.title" datatype="html">
+        <source> Projets </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/projects/projects.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="card.role.student" datatype="html">
+        <source>Étudiant</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/card/card.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="card.role.engineer" datatype="html">
+        <source>Software Engineer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/card/card.html</context>
+          <context context-type="linenumber">39,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="card.label.studyAt" datatype="html">
+        <source>Étudier à :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/card/card.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="card.label.missionFor" datatype="html">
+        <source>Mission pour</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/card/card.html</context>
+          <context context-type="linenumber">48,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terminal.close" datatype="html">
+        <source>Fermer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/terminal-cmd/terminal-cmd.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terminal.minimize" datatype="html">
+        <source>Réduire</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/terminal-cmd/terminal-cmd.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terminal.maximize" datatype="html">
+        <source>Agrandir</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/terminal-cmd/terminal-cmd.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

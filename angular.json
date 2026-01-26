@@ -13,10 +13,17 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "fr-FR",
+        "locales": {
+          "en-US": "src/locale/messages.en.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "localize": true,
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -51,7 +58,13 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
-            }
+            },
+              "fr-FR": {
+                "localize": ["fr-FR"]
+              },
+              "en-US": {
+                "localize": ["en-US"]
+              }
           },
           "defaultConfiguration": "production"
         },
@@ -63,6 +76,12 @@
             },
             "development": {
               "buildTarget": "portfolio:build:development"
+            },
+              "fr": {
+              "buildTarget": "portfolio:build:development,fr"
+            },
+              "en": {
+              "buildTarget": "portfolio:build:development,en"
             }
           },
           "defaultConfiguration": "development"
