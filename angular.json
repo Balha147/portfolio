@@ -29,7 +29,15 @@
             ],
             "styles": [
               "src/styles.scss"
-            ]
+            ],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "security": {
+              "allowedHosts": []
+            },
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -63,12 +71,15 @@
             },
             "development": {
               "buildTarget": "portfolio:build:development"
+            },
+            "fr": {
+              "buildTarget": "portfolio:build:development,fr"
+            },
+            "en": {
+              "buildTarget": "portfolio:build:development,en"
             }
           },
           "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
         },
         "test": {
           "builder": "@angular/build:karma",

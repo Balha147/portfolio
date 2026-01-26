@@ -1,0 +1,102 @@
+<section id="testimonials" class="relative py-24 md:py-32 px-6 overflow-hidden
+          bg-[var(--bg-main)] text-[var(--text-main)]
+          transition-colors duration-500 border-t border-[var(--border-soft)]">
+
+    <!-- Motif de grille en arrière-plan -->
+    <div class="absolute inset-0 pointer-events-none opacity-60
+              bg-[radial-gradient(var(--grid-color)_1px,transparent_1px)]
+              [background-size:24px_24px]
+              [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_40%,transparent_100%)]">
+    </div>
+
+    <!-- Halo lumineux d'ambiance -->
+    <div class="absolute bottom-1/4 -right-40
+              w-[450px] h-[450px] rounded-full
+              bg-[var(--primary)] opacity-[0.03] dark:opacity-[0.025]
+              blur-[130px] pointer-events-none">
+    </div>
+
+    <div class="max-w-7xl mx-auto w-full relative z-10">
+
+        <!-- En-tête de section -->
+        <div class="flex items-center gap-3 mb-8">
+            <span class="text-xs font-mono uppercase tracking-[0.25em] text-[var(--primary)]">03.</span>
+            <span class="text-xs font-mono uppercase tracking-[0.25em] text-[var(--text-soft)]">Recommandations &
+                Retours</span>
+            <div class="h-px bg-[var(--border-soft)] flex-1 max-w-[100px]"></div>
+        </div>
+
+        <!-- Titre principal -->
+        <div class="mb-16">
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter uppercase leading-none">
+                Ce qu'ils disent<br />
+                <span
+                    class="bg-gradient-to-r from-[#ff5520] via-[#e85aa9] to-[#7657ff] dark:from-[#ff6333] bg-clip-text text-transparent">
+                    De notre collaboration
+                </span>
+            </h2>
+        </div>
+
+        <!-- Grille des témoignages -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            @for (item of testtimonialsConfig; track item.company + item.role) {
+            <div class="group relative flex flex-col justify-between p-6 md:p-8 rounded-2xl border border-[var(--border-soft)] 
+                  bg-[var(--bg-card)]/50 backdrop-blur-sm transition-all duration-300 
+                  hover:border-[var(--border-strong)] hover:-translate-y-1 shadow-sm hover:shadow-md">
+
+                <div>
+                    <!-- Badge Mot-clé & Icône Guillemet -->
+                    <div class="flex items-center justify-between mb-6">
+                        @if (item.highlightKey) {
+                        <span
+                            class="px-2.5 py-1 rounded-md text-[10px] font-mono uppercase tracking-wider bg-[var(--primary)]/10 text-[var(--primary)] border border-[var(--primary)]/20">
+                            {{ item.highlightKey }}
+                        </span>
+                        }
+                        <span
+                            class="text-3xl font-serif text-[var(--text-muted)] opacity-40 group-hover:text-[var(--primary)] group-hover:opacity-100 transition-all duration-300 select-none">
+                            “
+                        </span>
+                    </div>
+
+                    <!-- Citation -->
+                    <p class="text-xs md:text-sm text-[var(--text-soft)] leading-relaxed font-light italic mb-8">
+                        "{{ item.quote }}"
+                    </p>
+                </div>
+
+                <!-- Profil de l'auteur -->
+                <div class="flex items-center gap-3 pt-4 border-t border-[var(--border-soft)] mt-auto">
+
+                    <!-- Avatar / Initiale -->
+                    @if (item.avatar) {
+                    <div class="w-10 h-10 rounded-full border border-[var(--border-soft)] overflow-hidden shrink-0">
+                        <img [ngSrc]="item.avatar" [alt]="item.name" width="40" height="40"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    } @else {
+                    <div
+                        class="w-10 h-10 rounded-full border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-[var(--primary)] flex items-center justify-center font-mono font-bold text-xs shrink-0">
+                        {{ item.initials }}
+                    </div>
+                    }
+
+                    <div class="overflow-hidden">
+                        <h3 class="text-sm font-bold text-[var(--text-main)] truncate">
+                            {{ item.role }}
+                        </h3>
+                        <p class="text-xs font-mono text-[var(--text-muted)] truncate">
+                            &#64;{{ item.company }}
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            }
+
+        </div>
+
+    </div>
+</section>

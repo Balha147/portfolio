@@ -1,22 +1,44 @@
-import { CardModel } from "../../shared/card/card.type";
+interface Education {
+  institution: string;
+  degree: string;
+  specialty: string;
+  period: string;
+  duration: string;
+  level: string;
+  location: string;
+  skills: string[];
+}
 
-export const EDUCATIONS_CONFIG: CardModel[] = [
-{
-    title: 'Ingénieur en Génie informatique',
-    clientName: 'ESPRIT',
-    appName: 'Spécialité Web & Mobile',
-    imageName: 'esprit.png',
-    status: 'Diplômé',
-    date: '2016 - 2019',
-    type: 'education'
+export const EDUCATIONS_CONFIG: Education[] = [
+  {
+    institution: "École Supérieure Privée d'Ingénierie et de Technologies — ESPRIT",
+    degree: "Diplôme d'Ingénieur",
+    specialty: 'Développement Web & Technologies Internet',
+    period: '2016 — 2019',
+    duration: '3 ans',
+    level: 'Ingénieur en Informatique',
+    location: 'Tunis, Tunisie',
+    skills: [
+      'Architecture Web',
+      'Génie Logiciel',
+      'Développement Avancé',
+      'Gestion de Projet',
+      'Communication & Travail en Équipe'
+    ]
   },
   {
-    title: 'Licence fondamentale en informatique',
-    clientName: 'Faculté des Sciences de Tunis (FST)',
-    appName: 'Génie Logiciel',
-    imageName: 'fst.jpg',
-    status: 'Diplômé',
-    date: '2013 - 2016',
-    type: 'education'
+    institution: 'Faculté des Sciences Mathématiques, Physiques et Naturelles de Tunis',
+    degree: 'Licence Fondamentale',
+    specialty: 'Sciences Informatiques',
+    period: '2013 — 2016',
+    duration: '3 ans',
+    level: 'Technicien Supérieur en Informatique',
+    location: 'Tunis, Tunisie',
+    skills: [
+      'Algorithmique & Structures de Données',
+      'Bases de Données',
+      'Systèmes & Réseaux',
+      'Programmation Orientée Objet'
+    ]
   }
-]
+];

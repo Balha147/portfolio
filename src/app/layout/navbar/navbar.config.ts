@@ -1,13 +1,15 @@
-interface NavbarModel {
+export interface NavItem {
   label: string;
   path: string;
-  icon: string;
 }
 
-export const NAVBAR_CONFIG: NavbarModel[] = [
-  { label: 'Accueil', path: '#hero', icon: 'house' },
-  { label: 'À propos', path: '#about', icon: 'user' },
-  { label: 'Compétences', path: '#skills', icon: 'bolt' },
-  { label: 'Projets', path: '#projects', icon: 'code' },
-  { label: 'Contact', path: '#contact', icon: 'paper-plane' }
+export const NAVBAR_CONFIG: NavItem[] = [
+  { label: 'À propos', path: '#about' },
+  { label: 'Compétences', path: '#skills' },
+  { label: 'Expériences', path: '#experiences' },
+  { label: 'Projets', path: '#projects' },
+  { label: 'Formations', path: '#educations' },
+  { label: 'Avis', path: '#testimonials' },
+  { label: 'Communauté', path: '#community' },
+  { label: 'Contact', path: '#contact' }
 ];

@@ -1,14 +1,12 @@
 import { Component, HostListener, inject, signal } from '@angular/core';
 import { ThemeService } from '../../core/theme.service';
 import { Switch } from '../../shared/switch/switch';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NAVBAR_CONFIG } from './navbar.config';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.html',
-  styleUrl: './navbar.scss',
-  imports: [Switch, FontAwesomeModule]
+  imports: [Switch]
 })
 export class Navbar {
   private readonly themeService = inject(ThemeService);
@@ -19,7 +17,21 @@ export class Navbar {
 
   menuOpen = signal(false);
 
+  scrollProgress = signal(0);
+
   navItems = NAVBAR_CONFIG;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    const scrollY = window.scrollY;
+    this.scrolled.set(scrollY > 20);
+
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolledPercent = height > 0 ? (winScroll / height) * 100 : 0;
+
+    this.scrollProgress.set(Math.min(100, Math.max(0, scrolledPercent)));
+  }
 
   onToggleTheme(): void {
     this.themeService.toggle();
@@ -33,8 +45,4 @@ export class Navbar {
     this.menuOpen.set(false);
   }
 
-  @HostListener('window:scroll')
-  onScroll(): void {
-    this.scrolled.set(window.scrollY > 20);
-  }
 }

@@ -1,17 +1,56 @@
-<section
-  id="hero"
-  class="w-full min-h-[200px] bg-[var(--bg-section)] px-6 sm:px-8 lg:px-20 py-16 lg:py-24
-         mt-20 md:mt-24"
->
-  <div class="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-    <div class="order-1 lg:order-2 flex justify-center min-h-[320px] w-full">
-      <div class="w-full max-w-xl">
-        <app-terminal-cmd [text]="text" />
-      </div>
+<section id="hero" class="relative min-h-screen overflow-hidden flex flex-col justify-between
+         pt-12 pb-8 px-6
+         bg-[var(--bg-main)] text-[var(--text-main)]
+         transition-colors duration-500">
+
+  <div class="absolute inset-0 pointer-events-none opacity-100
+             bg-[radial-gradient(var(--grid-color)_1px,transparent_1px)]
+             [background-size:24px_24px]
+             [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,#000_50%,transparent_100%)]">
+  </div>
+
+  <div class="absolute -top-40 left-1/3
+             w-[500px] h-[500px] rounded-full
+             bg-[var(--primary)] opacity-[0.04] dark:opacity-[0.035]
+             blur-[140px] pointer-events-none">
+  </div>
+
+  <div class="max-w-7xl mx-auto w-full
+             grid grid-cols-1 lg:grid-cols-12
+             gap-8 items-center
+             relative z-10 my-auto">
+
+    <div class="lg:col-span-7 flex flex-col items-start gap-6 z-20">
+      <span class="text-xs font-mono uppercase tracking-[0.25em] text-[var(--text-soft)]">
+        Senior Frontend Engineer
+      </span>
+
+      <h1 class="text-6xl sm:text-8xl lg:text-9xl font-black tracking-tighter uppercase leading-none select-none">
+        Hedi<br />
+        <span
+          class="bg-gradient-to-r from-[#ff5520] via-[#e85aa9] to-[#7657ff] dark:from-[#ff6333] bg-clip-text text-transparent">
+          Basly
+        </span>
+      </h1>
+
+      <p class="max-w-md text-sm md:text-base text-[var(--text-soft)] leading-relaxed font-light">
+        Je conçois des applications Angular robustes, des architectures frontend scalables et des Design Systems qui
+        facilitent le développement au quotidien.
+
+      </p>
     </div>
 
-    <div class="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
-      <app-profil />
+    <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
+      <div class="relative w-full max-w-md aspect-[3/4] overflow-hidden">
+
+        <img [ngSrc]="'assets/images/me.png'" alt="Hedi Basly" fill priority
+          class="object-cover grayscale contrast-125 brightness-105 transition-all duration-500 dark:grayscale-0 dark:mix-blend-lighten" />
+
+        <div class="absolute inset-x-0 bottom-0 h-1/3
+               bg-gradient-to-t from-[var(--bg-main)] to-transparent
+               pointer-events-none">
+        </div>
+      </div>
     </div>
   </div>
 </section>

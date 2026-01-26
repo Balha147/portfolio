@@ -1,0 +1,122 @@
+<section id="projects" class="relative py-24 md:py-32 px-6 overflow-hidden
+         bg-[var(--bg-main)] text-[var(--text-main)]
+         transition-colors duration-500 border-t border-[var(--border-soft)]">
+
+    <!-- Grille de fond -->
+    <div class="absolute inset-0 pointer-events-none opacity-60
+             bg-[radial-gradient(var(--grid-color)_1px,transparent_1px)]
+             [background-size:24px_24px]
+             [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_40%,transparent_100%)]">
+    </div>
+
+    <!-- Halo lumineux de fond -->
+    <div class="absolute top-1/3 -left-40
+             w-[450px] h-[450px] rounded-full
+             bg-[var(--primary)] opacity-[0.03] dark:opacity-[0.025]
+             blur-[130px] pointer-events-none">
+    </div>
+
+    <div class="max-w-7xl mx-auto w-full relative z-10">
+
+        <!-- En-tête de section -->
+        <div class="flex items-center gap-3 mb-8">
+            <span class="text-xs font-mono uppercase tracking-[0.25em] text-[var(--primary)]">04.</span>
+            <span class="text-xs font-mono uppercase tracking-[0.25em] text-[var(--text-soft)]">Projets & Open
+                Source</span>
+            <div class="h-px bg-[var(--border-soft)] flex-1 max-w-[100px]"></div>
+        </div>
+
+        <!-- Titre principal -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter uppercase leading-none">
+                    Projets &<br />
+                    <span
+                        class="bg-gradient-to-r from-[#ff5520] via-[#e85aa9] to-[#7657ff] dark:from-[#ff6333] bg-clip-text text-transparent">
+                        Open Source
+                    </span>
+                </h2>
+            </div>
+
+            <!-- Lien vers GitHub profil -->
+            <a href="https://github.com/Balha147" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-[var(--border-soft)] bg-[var(--bg-card)] text-xs font-mono text-[var(--text-soft)] hover:text-[var(--text-main)] hover:border-[var(--border-strong)] transition-all duration-300 group">
+                <svg class="w-4 h-4 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>Voir tous les dépôts GitHub</span>
+                <span class="text-[var(--primary)] font-bold">→</span>
+            </a>
+        </div>
+
+        <!-- Grille des projets -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            @for (project of projects; track project.title) {
+            <div
+                class="group relative p-6 md:p-8 rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-card)]/50 backdrop-blur-sm transition-all duration-300 hover:border-[var(--border-strong)] hover:-translate-y-1 flex flex-col justify-between">
+
+                <div>
+                    <!-- Header de carte : Categorie + Liens -->
+                    <div class="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-[var(--border-soft)]">
+                        <span class="text-[10px] font-mono text-[var(--primary)] uppercase tracking-wider">
+                            {{ project.category }}
+                        </span>
+
+                        <!-- Liens GitHub / Demo -->
+                        <div class="flex items-center gap-3">
+                            <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer"
+                                title="Voir le code source"
+                                class="text-[var(--text-muted)] hover:text-[var(--text-main)] transition-colors">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Titre du projet -->
+                    <h3
+                        class="text-2xl font-black tracking-tight text-[var(--text-main)] mb-3 group-hover:text-[var(--primary)] transition-colors">
+                        <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer">
+                            {{ project.title }}
+                        </a>
+                    </h3>
+
+                    <!-- Description -->
+                    <p class="text-xs md:text-sm text-[var(--text-soft)] font-light leading-relaxed mb-6">
+                        {{ project.description }}
+                    </p>
+
+                    <!-- Highlights / Points clés -->
+                    <ul class="space-y-2 mb-6">
+                        @for (highlight of project.highlights; track highlight) {
+                        <li class="flex items-start gap-2 text-xs text-[var(--text-soft)]">
+                            <span class="text-[var(--primary)] font-mono select-none">▸</span>
+                            <span>{{ highlight }}</span>
+                        </li>
+                        }
+                    </ul>
+                </div>
+
+                <!-- Technologies / Stack -->
+                <div class="pt-4 border-t border-[var(--border-soft)]">
+                    <div class="flex flex-wrap gap-1.5">
+                        @for (tech of project.techStack; track tech) {
+                        <span
+                            class="px-2 py-0.5 rounded bg-[var(--bg-main)] border border-[var(--border-soft)] text-[10px] font-mono text-[var(--text-muted)]">
+                            {{ tech }}
+                        </span>
+                        }
+                    </div>
+                </div>
+
+            </div>
+            }
+
+        </div>
+
+    </div>
+</section>
