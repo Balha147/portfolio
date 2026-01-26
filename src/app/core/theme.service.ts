@@ -5,7 +5,7 @@ export type Theme = 'light' | 'dark';
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
   theme = signal<Theme>(
-    (localStorage.getItem('theme') as Theme) || 'light'
+    (localStorage.getItem('theme') as Theme) || 'dark'
   );
 
   constructor() {
@@ -15,7 +15,14 @@ export class ThemeService {
     });
   }
 
-  toggle(): void {
+toggle(): void {
+  if (!document.startViewTransition) {
     this.theme.update((t: Theme) => (t === 'light' ? 'dark' : 'light'));
+    return;
   }
+
+  const transition = document.startViewTransition(() => {
+    this.theme.update((t: Theme) => (t === 'light' ? 'dark' : 'light'));
+  });
+}
 }

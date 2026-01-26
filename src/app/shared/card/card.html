@@ -13,6 +13,7 @@
             class="w-full h-full object-contain"
           />
         </div>
+
         <div class="flex flex-col">
           <span
             class="text-[10px] font-bold uppercase tracking-widest text-[var(--primary)] bg-[var(--primary)]/10 px-2 py-0.5 rounded w-fit"
@@ -32,11 +33,22 @@
     <h3
       class="text-xl sm:text-2xl font-bold text-[var(--text-main)] mb-3 group-hover:text-[var(--primary)] transition-colors"
     >
-      {{config().type === 'education' ? 'Etudiant' : 'Software Engineer'}}
+      @if (config().type === 'education') {
+        <ng-container i18n="@@card.role.student">Étudiant</ng-container>
+      } @else {
+        <ng-container i18n="@@card.role.engineer">Software Engineer</ng-container>
+      }
     </h3>
 
     <div class="flex items-center gap-2 flex-wrap">
-      <span class="text-sm text-[var(--text-soft)]">{{config().type === 'education' ? 'Étudier à: ' : 'Mission pour'}}</span>
+      <span class="text-sm text-[var(--text-soft)]">
+        @if (config().type === 'education') {
+          <ng-container i18n="@@card.label.studyAt">Étudier à :</ng-container>
+        } @else {
+          <ng-container i18n="@@card.label.missionFor">Mission pour</ng-container>
+        }
+      </span>
+
       <a
         [href]="config().linkApp"
         target="_blank"

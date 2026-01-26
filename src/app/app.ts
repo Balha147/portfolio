@@ -9,6 +9,7 @@ import { Projects } from './layout/projects/projects';
 import { Educations } from './layout/educations/educations';
 import { Contact } from './layout/contact/contact';
 import { Footer } from './layout/footer/footer';
+import { ScrollToTop } from './shared/scroll-to-top/scroll-to-top';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ import { Footer } from './layout/footer/footer';
     Educations,
     Contact,
     Footer,
+    ScrollToTop,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

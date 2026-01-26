@@ -1,22 +1,24 @@
 import { CardModel } from "../../shared/card/card.type";
 
 export const EDUCATIONS_CONFIG: CardModel[] = [
-{
-    title: 'Ingénieur en Génie informatique',
+  {
+    title: $localize`:@@edu.esprit.title:Ingénieur en Génie informatique`,
     clientName: 'ESPRIT',
-    appName: 'Spécialité Web & Mobile',
+    appName: $localize`:@@edu.esprit.specialty:Spécialité Web & Mobile`,
     imageName: 'esprit.png',
-    status: 'Diplômé',
+    status: $localize`:@@edu.status.graduated:Diplômé`,
     date: '2016 - 2019',
-    type: 'education'
+    type: 'education',
+    linkApp: 'https://www.esprit.tn/'
   },
   {
-    title: 'Licence fondamentale en informatique',
+    title: $localize`:@@edu.fst.title:Licence fondamentale en informatique`,
     clientName: 'Faculté des Sciences de Tunis (FST)',
-    appName: 'Génie Logiciel',
+    appName: $localize`:@@edu.fst.specialty:Génie Logiciel`,
     imageName: 'fst.jpg',
-    status: 'Diplômé',
+    status: $localize`:@@edu.status.graduated:Diplômé`,
     date: '2013 - 2016',
-    type: 'education'
+    type: 'education',
+    linkApp: 'https://utm.rnu.tn/utm/fr/etablissements--faculte-des-sciences-mathematiques-physiques-et-naturelles-de-tunis'
   }
-]
+];

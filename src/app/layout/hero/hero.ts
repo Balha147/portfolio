@@ -6,15 +6,14 @@ import { Profil } from './profil/profil';
   selector: 'app-hero',
   imports: [TerminalCmd, Profil],
   templateUrl: './hero.html',
-  styleUrl: './hero.scss',
 })
 export class Hero {
   text = `
-  const developer = {
+const developer = {
         name: 'Mohamed Hedi Basly',
-        role: 'Frontend Angular Developer',
+        role: '${$localize`:@@hero.dev.role:Senior Developer`}',
         skills: {
-          frontend: ['Angular 17+', 'TS/JS', 'Signals', 'RxJS', 'NgRx'],
+          frontend: ['Angular 17+', 'TS/JS', 'Signals', 'RxJS', 'NgRx', 'Accessibilité'],
           backend: ['NestJS', 'REST APIs', 'PostgreSQL', 'MongoDB'],
         },
         hardWorker: true,
