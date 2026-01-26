@@ -1,64 +1,88 @@
-<section id="about" class="relative py-16 py-16 lg:py-24">
-  <div class="text-center mb-12 lg:mb-16">
-    <h2 class="text-3xl lg:text-4xl font-bold text-[var(--text-primary)] uppercase">À Propos</h2>
-    <div
-      class="mt-4 mx-auto h-1 w-20 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--accent)]"
-    ></div>
-  </div>
+<section id="about" class="relative py-20 lg:py-32 scroll-mt-20 overflow-hidden">
+  <header class="text-center mb-24 relative z-10">
+    <h2  i18n="@@about.title" class="text-5xl lg:text-7xl font-black tracking-tighter text-[var(--text-main)]">
+      A propos
+    </h2>
+    <div class="mt-6 mx-auto h-1.5 w-24 rounded-full bg-[var(--btn-gradient)]"></div>
+  </header>
 
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
     <div class="flex justify-center lg:justify-start py-8">
-  <div class="relative group animate-float">
-    <div class="absolute -inset-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] rounded-2xl blur opacity-40 group-hover:opacity-80 transition duration-1000"></div>
+      <div class="relative group animate-float">
+        <div
+          class="absolute -inset-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] rounded-2xl blur opacity-40 group-hover:opacity-80 transition duration-1000"
+        ></div>
 
-    <div class="relative bg-[var(--bg-card)] rounded-2xl overflow-hidden border border-[var(--border-soft)] shadow-2xl">
-      <img
-        src="assets/images/me.jpg"
-        alt="Basly Mohamed Hedi"
-        class="w-[280px] h-[350px] object-cover scale-105 group-hover:scale-110 transition-transform duration-700 ease-in-out"
-      />
+        <div
+          class="relative bg-[var(--bg-card)] rounded-2xl overflow-hidden border border-[var(--border-soft)] shadow-2xl"
+        >
+          <img
+            ngSrc="assets/images/me.png"
+            i18n-alt="@@about.imageAlt"
+            alt="Basly Mohamed Hedi"
+            width="560"
+            height="700"
+            priority
+            class="w-[280px] h-[350px] object-cover scale-105 group-hover:scale-110 transition-transform duration-700 ease-in-out block"
+            style="height: auto"
+          />
 
-      <div class="absolute inset-0 bg-gradient-to-t from-[var(--bg-main)]/40 via-transparent to-transparent"></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[var(--bg-main)]/40 via-transparent to-transparent"
+          ></div>
+        </div>
+
+        <div
+          class="absolute -bottom-4 -right-4 bg-[var(--bg-card)] border border-[var(--primary)]/30 px-4 py-2 rounded-lg shadow-2xl backdrop-blur-md z-10"
+        >
+          <span
+            i18n="@@about.jobTitle"
+            class="text-[10px] sm:text-xs font-black tracking-[0.1em] uppercase bg-[linear-gradient(90deg,oklch(63.32%_.24_31.68)_0%,oklch(69.02%_.277_332.77)_50%,oklch(53.18%_.28_296.97)_100%)] bg-clip-text text-transparent"
+          >
+            Senior Developer
+          </span>
+        </div>
+      </div>
     </div>
 
-    <div class="absolute -bottom-4 -right-4 bg-[var(--bg-card)] border border-[var(--primary)]/30 px-4 py-2 rounded-lg shadow-2xl backdrop-blur-md z-10">
-      <span class="text-[10px] sm:text-xs font-black tracking-[0.1em] uppercase bg-[linear-gradient(90deg,oklch(63.32%_.24_31.68)_0%,oklch(69.02%_.277_332.77)_50%,oklch(53.18%_.28_296.97)_100%)] bg-clip-text text-transparent">
-        Senior Developer
-      </span>
+    <div class="space-y-6">
+      <div class="flex items-center gap-4 group">
+        <p
+          i18n="@@about.whoAmI"
+          class="text-sm uppercase font-bold tracking-[0.3em] whitespace-nowrap text-[var(--text-soft)]"
+        >
+          Qui suis-je ?
+        </p>
+        <div
+          class="h-[1px] w-12 bg-[var(--border-soft)] group-hover:w-20 group-hover:bg-[var(--primary)] transition-all duration-500"
+        ></div>
+      </div>
+
+      <p
+        i18n="@@about.description"
+        class="text-base lg:text-lg leading-relaxed text-[var(--text-soft)] font-light"
+      >
+        Avec <span class="font-bold text-[var(--text-main)]">6 ans</span> d'expérience en
+        développement <span class="font-bold text-[var(--text-main)]">Front-End</span>, je me suis
+        spécialisé dans l'écosystème
+        <span class="angular font-semibold text-[var(--text-main)]">Angular 17+</span> où j'ai pu
+        mener divers projets à succès. J'ai également acquis une bonne connaissance du côté
+        Back-End, notamment avec
+        <span class="nest font-semibold text-[var(--text-main)]">NestJS</span> et Java, ce qui me
+        permet d'appréhender les défis techniques dans leur globalité. <br /><br />
+        Mon travail se concentre sur la conception d'applications web robustes et maintenables, avec
+        une attention particulière à la
+        <span
+          class="text-[var(--text-main)] font-medium underline decoration-[var(--primary)]/30 underline-offset-4"
+          >gestion d'état</span
+        >
+        et à l'expérience utilisateur. Ma compréhension des aspects Back-End facilite la
+        collaboration avec les différentes équipes et permet une intégration optimale des
+        <span class="text-[var(--text-main)] font-medium">API REST/GraphQL</span>. <br /><br />
+        Attentif aux bonnes pratiques et aux évolutions technologiques, je cherche à contribuer à
+        des projets où je pourrais apporter à la fois mon expertise Front-End et ma vision
+        Full-Stack.
+      </p>
     </div>
-  </div>
-</div>
-    <!-- <div class="flex justify-center lg:justify-start">
-      <img
-        src="assets/images/me.jpg"
-        alt="Basly Mohamed Hedi"
-        loading="lazy"
-        width="300"
-        height="300"
-        class="rounded-xl shadow-xl transition-all duration-700 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer"
-      />
-    </div> -->
-
-<div class="space-y-6">
-  <div class="flex items-center gap-4 group">
-    <p class="text-sm uppercase font-bold tracking-[0.3em] whitespace-nowrap text-[var(--text-soft)]">
-      Qui suis-je ?
-    </p>
-    <div class="h-[1px] w-12 bg-[var(--border-soft)] group-hover:w-20 group-hover:bg-[var(--primary)] transition-all duration-500"></div>
-  </div>
-
-  <p class="text-base lg:text-lg leading-relaxed text-[var(--text-soft)] font-light">
-    Développeur <span class="font-bold text-[var(--text-main)]">Senior Front-End</span> passionné et autodidacte, je me spécialise dans l'écosystème
-    <span class="angular font-semibold text-[var(--text-main)]">Angular 17+</span> et
-    <span class="nest font-semibold text-[var(--text-main)]">NestJS</span>. Mon expertise réside dans l'architecture d'applications web scalables, l'accompagnement d'équipes techniques et la résolution de défis métier complexes.
-    <br /><br />
-    Bien que mon excellence s'exprime pleinement dans la création d'interfaces riches et la
-    <span class="text-[var(--text-main)] font-medium underline decoration-[var(--primary)]/30 underline-offset-4">gestion d'états complexes</span>,
-    je m'appuie sur une solide expérience Full-Stack pour concevoir des solutions globales. Ma maîtrise du Back-End me permet de dialoguer efficacement avec les
-    <span class="text-[var(--text-main)] font-medium">API REST/GraphQL</span> et de garantir une intégration fluide, performante et parfaitement architecturée.
-    <br /><br />
-    Engagé envers les bonnes pratiques du <span class="italic text-[var(--text-main)]">Clean Code</span> et l'innovation technologique, je mets mon expertise au service de projets ambitieux pour bâtir des solutions d'entreprise pérennes et performantes.
-  </p>
-</div>
   </div>
 </section>
